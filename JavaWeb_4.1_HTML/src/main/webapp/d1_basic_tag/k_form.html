@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+
+<body>
+<form action="#(提交表单的地址)" method="get">
+    <!-- 隐藏字段 -->
+    <input type="hidden" name="username" value="修改后的值"/><br/>
+
+    <!--  文本框：提交的是name的内容 -->
+    用户名：<label><input type="text" name="username" size="30px" placeholder="请输入用户名"></label><br>
+
+    <!--  密码框：提交的是name的内容 -->
+    密码：<label><input type="password" name="password" required="required"></label><br>
+    确认密码：<label><input type="password" name="repassword"></label><br>
+
+    <!--  单选框：提交的是value的内容 -->
+    性别：
+    <label><input type="radio" name="sex" value="男" checked="checked"></label>男
+    <label><input type="radio" name="sex" value="女"></label>女<br>
+
+    <!-- 复选框：提交的是value的内容 -->
+    爱好：
+    <label><input type="checkbox" name="hobby" value="唱歌"></label>唱歌
+    <label><input type="checkbox" name="hobby" value="跳舞"></label>跳舞
+    <label><input type="checkbox" name="hobby" value="上网"></label>上网<br>
+
+    头像：<input type="file" name="file"><br>
+
+    <!-- 选择框：提交的是value的内容 -->
+    籍贯：
+    <label><select name="province">
+        <option>---请选择---</option>
+        <option value="北京" selected="selected">北京</option> <!-- selected默认选择北京 -->
+        <option value="上海">上海</option>
+        <option value="广州">广州</option>
+    </select>
+</label><br>
+
+    自我介绍：<label>
+    <textarea name="自我介绍"></textarea></label><br>
+
+    <!-- 按钮不需要name属性 -->
+    提交按钮：<input type="submit" value="注册"><br>
+    普通按钮：<input type="button" value="普通"><br>
+    重置按钮：<input type="reset" value="重置"><br>
+</form>
+</body>
+</html>

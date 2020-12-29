@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  User：蓝田_Loto
+  Date：2018-09-26 10:55
+  PageName：e_AbbreviatedText.html
+  Function：缩写文本
+  URL：http://localhost:8080/d2_html_tag/g_AbbreviatedText.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>缩写文本</title>
+</head>
+
+<body>
+<!-- 可以定义简称或缩写-->
+<p>
+    <abbr title="Abbreviation">abbr</abbr>
+    元素最初是在HTML3.0中引入的，表示它所包含的文本是一个更长的单词或短语的缩写形式。浏览器可能会根据这个信息改变对这些文本的显示方式，或者用其他文本代替。
+</p>
+
+<!-- 可以定义首字母缩写-->
+<p>
+    <acronym title="Hypertext Markup Language">HTML</acronym>
+    是目前网络上应用最为广泛的语言，也是构成网页文档的主要语言。
+</p>
+
+<!-- IE6及其以下版本的浏览器不支持abbr元素，解决方案：在abbr元素外包含一个span元素 -->
+<p>
+    <span title="Abbreviation">
+        <abbr title="Abbreviation">abbr</abbr>
+    </span>
+    元素最初是在HTML3.0中引入的，表示它所包含的文本是一个更长的单词或短语的缩写形式。浏览器可能会根据这个信息改变对这些文本的显示方式，或者用其他文本代替。
+</p>
+</body>
+</html>

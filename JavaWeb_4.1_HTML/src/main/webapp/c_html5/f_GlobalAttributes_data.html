@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  User：蓝田_Loto
+  Date：2018-08-27 14:08
+  PageName：f_GlobalAttributes_data.html
+  Function：HTML5全局属性 - data-*
+  URL：http://localhost:8080/c_html5/f_GlobalAttributes_data.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5全局属性 - data-*</title>
+</head>
+
+<body>
+<ul>
+    <li data-animal-type="bird">鸟</li>
+    <li data-animal-type="fish">鱼</li>
+    <li data-animal-type="spider">蜘蛛</li>
+</ul>
+
+<!-- 遍历并打印到浏览器调试的控制台 -->
+<script>
+    var lis = document.getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        console.log(lis[i].dataset.animalType);
+    }
+</script>
+</body>
+</html>

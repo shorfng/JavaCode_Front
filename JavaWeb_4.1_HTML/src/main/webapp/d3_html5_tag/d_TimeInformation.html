@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  User：蓝田_Loto
+  Date：2018-09-26 16:18
+  PageName：d_TimeInformation.html
+  Function：时间信息
+  URL：http://localhost:8080/e_design_html5/d_TimeInformation.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>时间信息</title>
+</head>
+
+<body>
+<!-- datetime属性中日期和时间之间要用“T”文字分隔，“T”表示时间 -->
+<time datetime="2017-11-13">2017年11月13日</time><br>
+<time datetime="2017-11-13">11月13日</time><br>
+<time datetime="2017-11-13">我的生日</time><br>
+<time datetime="2017-11-13T20:00">我生日的晚上8点</time><br>
+<time datetime="2017-11-13T20:00Z">我生日的晚上8点</time><br>
+<time datetime="2017-11-13T20:00+09:00">我生日的晚上8点的美国时间</time><br><br>
+
+<!-- 使用pubdate属性为文档添加引擎检索的发布日期 -->
+<article>
+    <header>
+        <h1>科技公司都变成了数据公司：但你真的了解什么是“数据工程师”吗？</h1>
+        <p>发布日期
+            <time datetime="2016-12-30" pubdate>2016-12-30 09:19</time>
+        </p>
+    </header>
+
+    <p>在和国内外顶尖公司交流的过程中，我发现他们多数都很骄傲有一支极其专业的数据团队。这些公司花了大量的时间和精力把数据工程这件事情做到了极致，有不小规模的工程师团队，开源了大量数据技术。Linkedin 有
+        kafka、samza, Facebook 有 hive、presto，Airbnb有airflow、superset，我所熟悉的 Yelp 也有 mrjob……
+        这些公司在数据领域的精益求精，为后来的大步前进奠定了基石。</p>
+
+    <footer>
+        <p>https://www.huxiu.com/article/176524.html</p>
+    </footer>
+</article>
+
+<!-- 使用pubdate属性可以显示告诉引擎，文章中那个是真正的发布时间 -->
+<article>
+    <header>
+        <h1>科技公司都变成了数据公司：但你真的了解什么是“数据工程师”吗？</h1>
+        <p>发布日期
+            <time datetime="2016-12-30" pubdate>2016-12-30 09:19</time>
+        </p>
+
+        <p>关于
+            <time datetime=2017-1-1>1月1日</time>更正通知
+        </p>
+    </header>
+
+    <p>在和国内外顶尖公司交流的过程中，我发现他们多数都很骄傲有一支极其专业的数据团队。这些公司花了大量的时间和精力把数据工程这件事情做到了极致，有不小规模的工程师团队，开源了大量数据技术。Linkedin 有 kafka、samza, Facebook 有 hive、presto，Airbnb有airflow、superset，我所熟悉的 Yelp 也有 mrjob…… 这些公司在数据领域的精益求精，为后来的大步前进奠定了基石。</p>
+
+    <footer>
+        <p>https://www.huxiu.com/article/176524.html</p>
+    </footer>
+</article>
+</body>
+</html>
