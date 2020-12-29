@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 16:43
+  PageName：e_Type_DatePickers.html
+  Function：H5新增输入类型 - 日期选择器类型
+  URL：http://localhost:8080/j_form/j3_form_input_type/e_Type_DatePickers.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增输入类型 - 日期选择器类型</title>
+</head>
+
+<body>
+以下日期可以手动输入，也可以选择
+<form action="demo_form.php" method="get">
+    date，年月日：
+    <input type="date" name=" date1"/>
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    month，年月：
+    <input type="month" name=" month1"/>
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    week，年周：
+    <input type="week" name="week1"/>
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    time，时分：
+    <input type="time" name="time1"/>
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    time，时分秒：
+    <input type="time" name="time1" step="5" value="09:00">
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    datetime，手动输入：
+    <input type="datetime" name="datetime1"/>
+    <input type="submit"/>
+</form>
+
+<form action="demo_form.php" method="get">
+    datetime-local，年月日时分秒：
+    <input type="datetime-local" name="datetime-local1"/>
+    <input type="submit"/>
+</form>
+</body>
+</html>

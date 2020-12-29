@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-19 14:37
+  PageName：f_imagegradient_WebKit6.html
+  Function：渐变背景 - WebKit（径向渐变_球形）
+  URL：http://localhost:8080/f_image/f4_image_gradientbg/f_imagegradient_WebKit6.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>渐变背景 - WebKit（径向渐变_球形）</title>
+
+    <style type="text/css">
+        div {
+            width:400px;
+            height:200px;
+            border:2px solid #FCF;
+            padding: 4px;
+            /* 径向渐变_球形 */
+            background: -webkit-gradient(radial, 180 80, 10, 200 100, 90, from(#00C), to(rgba(1,159,98,0)), color-stop(98%, #0CF));
+            -webkit-background-origin: padding-box;
+            -webkit-background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

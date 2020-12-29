@@ -1,0 +1,159 @@
+@charset "gb2312";
+body {
+    margin: 0;
+    padding: 0;
+    font: 75%/1.4 verdana, Helvetica, sans-serif;
+    background-image: url(base/body_bg.gif);
+    text-align: center;
+}
+
+h1, h2, h3 span {
+    display: none;
+}
+
+h3 {
+    height: 39px;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================= layout ======================= */
+
+#container {
+    width: 772px;
+    margin: 0 auto;
+    padding: 0 13px;
+    position: relative;
+    background: url(base/bg.gif) repeat-x #dfdfdf;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    color: #454545;
+    text-align: left;
+}
+
+#pageHeader {
+    width: 772px;
+    height: 179px;
+    background: url(base/top.jpg);
+}
+
+#quickSummary, #preamble {
+    width: 546px;
+    background-color: #ffffff;
+    background-repeat: repeat-y;
+    margin: 0 0 2px 226px;
+    color: #454545;
+    display: block;
+    padding: 0;
+}
+
+#quickSummary p span {
+    padding: 0 15px 10px 77px;
+    display: block;
+}
+
+#preamble p span {
+    padding: 0 85px 10px 17px;
+    display: block;
+}
+
+#quickSummary .p1 span {
+    padding-top: 14px;
+    background: url(base/quicksummary_top.gif) top no-repeat;
+}
+
+#quickSummary .p2 span {
+    padding-bottom: 20px;
+    background: url(base/right_bottom.gif) bottom no-repeat;
+}
+
+/* ======================= background image ======================= */
+
+/* right image */
+#quickSummary p {
+    background: url(base/right_bg.gif) right repeat-y;
+}
+
+/* side image */
+#quickSummary {
+    background-image: url(base/img_quicksummary.jpg);
+    background-position: left bottom;
+}
+
+#preamble {
+    background-image: url(base/img_preamble.jpg);
+    background-position: right bottom;
+}
+
+/* h3 image */
+#preamble h3 {
+    background: url(base/title_preamble.gif) no-repeat;
+}
+
+/* bottom image */
+#preamble .p3 span {
+    padding-bottom: 20px;
+    background: url(base/right_bottom.gif) bottom no-repeat;
+}
+
+/* 左侧通栏绝对定位*/
+#linkList {
+    position: absolute;  /* 绝对定位 */
+    top: 179px;          /* 距离定位包含框的顶部距离，指页面的顶部 */
+    left: 20px;          /* 距离定位包含框的左侧距离，指网页左侧 */
+   /* left: 260px; */    /* （多级子菜单使用）距离定位包含框的左侧距离，指网页左侧 */
+    width: 207px;        /* 固定栏目的总宽度 */
+}
+
+a {
+    color:#D9189F;
+    text-decoration:underline;
+}
+
+a:hover, a:hover {
+    color:#FC7AD5;
+    background-color:#ffffff;
+}
+
+/* 为每个列表项定义虚线 */
+#linkList li {
+    list-style: none;        /* 清除项目列表符号 */
+    padding: 6px 0 10px 0;   /* 增加列表项上下空隙 */
+    background: url(base/line.gif) bottom repeat-x;  /* 定义虚线背景，水平平铺 */
+}
+
+/* 为列表项定义一个项目符号 */
+#linkList li a {
+    padding-left: 7px;    /* 在列表项左侧挤出7个像素空间 */
+    background: url(base/link.gif) left center no-repeat;  /* 定义项目符号 */
+    text-decoration: none;  /* 清除下划线 */
+}
+
+/* 定义当鼠标移过时为超链接增加下划线效果 */
+#linkList li a:hover {
+    text-decoration: underline;
+}
+
+/* ======================= 为该导航模块定义圆角显示效果 ======================= */
+
+/* 中间背景区域 */
+#lresources {
+    background: url(base/left_bg.gif) repeat-y; /* 背景图像垂直平铺 */
+}
+
+/* 顶部圆角 */
+#lresources h3 {
+    background: url(base/title_resources.gif) no-repeat;  /* 定义单块背景 */
+}
+
+/* 底部圆角 */
+#lresources ul {
+    margin: 0;
+    padding: 0 25px 20px 17px;   /* 增加底部空隙 */
+    background: url(base/left_bottom.gif) bottom no-repeat; /* 定义单块背景 */
+}

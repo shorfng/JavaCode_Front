@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-13 15:36
+  PageName：c_No.html
+  Function：伪类选择器 - 否定伪类
+  URL：http://localhost:8080/d4_selector_pseudoclass/c_No.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器 - 否定伪类</title>
+
+    <style type="text/css">
+        body {
+            font-family: "宋体" arial, helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 75%;
+            line-height: 1.4;
+            border: solid 2px #ccc;
+            width: 100%;
+        }
+
+        th, td {
+            padding: .3em .5em;
+            cursor: pointer;
+        }
+
+        th {
+            font-weight: normal;
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        /* 使用结构伪类选择器匹配合并单元格所在的行，定义合并单元格所在的行加粗显示 */
+        td:only-of-type {
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* 使用thead元素把表头标题独立出来，方便CSS控制，避免定义过多的class属性 */
+        thead th {
+            background: #c6ceda;
+            border-color: #fff #fff #888 #fff;
+            border-style: solid;
+            border-width: 1px 1px 2px 1px;
+            padding-left: .5em;
+        }
+
+        /* 使用否定伪类选择器选择主体区域非最后一个th元素，以背景方式在行前定义结构路径线 */
+        tbody th:not(.end) {
+            background: url(images/dots.gif) 15px 56% no-repeat;
+            padding-left: 26px;
+        }
+
+        /* 使用类选择器选择主体区域非最后一个th元素，以背景方式在行前定义结构封闭路径线 */
+        tbody th.end {
+            background: url(images/dots2.gif) 15px 56% no-repeat;
+            padding-left: 26px;
+        }
+
+        /* 设计隔行换色的背景效果 */
+        tbody tr:nth-child(2n) {
+            background-color: #fef;
+        }
+
+        /* 使用:hover动态伪类定义鼠标经过时的行背景色动画变化，以提示鼠标当前经过行效果 */
+        tbody tr:hover {
+            background: #fbf;
+        }
+
+        body, td, th {
+            font-family: "宋体 arial", helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>伪类表达式</th>
+        <th>说明</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td colspan="3">简单的结构伪类</td>
+    </tr>
+
+    <tr>
+        <th>1</th>
+        <td>:first-child</td>
+        <td>选择某个元素的第一个子元素。</td>
+    </tr>
+
+    <tr>
+        <th>2</th>
+        <td>:last-child</td>
+        <td>选择某个元素的最后一个子元素。</td>
+    </tr>
+
+    <tr>
+        <th>3</th>
+        <td>:first-of-type</td>
+        <td>选择一个上级元素下的第一个同类子元素。</td>
+    </tr>
+
+    <tr>
+        <th>4</th>
+        <td>:last-of-type</td>
+        <td>选择一个上级元素的最后一个同类子元素。</td>
+    </tr>
+
+    <tr>
+        <th>5</th>
+        <td>:only-child</td>
+        <td>选择的元素是它的父元素的唯一一个子元素。</td>
+    </tr>
+
+    <tr>
+        <th>6</th>
+        <td>:only-of-type</td>
+        <td>选择一个元素是它的上级元素的唯一一个相同类型的子元素。</td>
+    </tr>
+
+    <tr>
+        <th class="end">7</th>
+        <td>:empty</td>
+        <td>选择的元素里面没有任何内容。</td>
+    </tr>
+
+    <tr>
+        <td colspan="3">结构伪类函数</td>
+    </tr>
+
+    <tr>
+        <th>8</th>
+        <td>:nth-child()</td>
+        <td>选择某个元素的一个或多个特定的子元素。</td>
+    </tr>
+
+    <tr>
+        <th>9</th>
+        <td>:nth-last-child()</td>
+        <td>选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算。</td>
+    </tr>
+
+    <tr>
+        <th>10</th>
+        <td>:nth-of-type()</td>
+        <td>选择指定的元素。</td>
+    </tr>
+
+    <tr>
+        <th class="end">11</th>
+        <td>:nth-last-of-type()</td>
+        <td>选择指定的元素，从元素的最后一个开始计算。</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

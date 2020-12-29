@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-04 10:27
+  PageName：c_adjacentSelector.html
+  Function：组合选择器 - 相邻选择器
+  URL：http://localhost:8080/d2_selector_combinatiion/c_adjacentSelector.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器 - 相邻选择器</title>
+
+    <style type="text/css">
+        h2, p, h3 {
+            margin: 0;    /* 清除默认边距 */
+            padding: 0;   /* 清除默认间距 */
+            height: 30px; /* 初始化设置高度 */
+        }
+
+        p + h3 {
+            background-color: #0099ff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <h2>情况一：</h2>
+    <p>我是兄标签</p>
+    <h3>我是弟标签</h3>
+
+    <br>
+
+    <h2>情况二：</h2>
+    <div>我是阻碍物</div>
+    <p>我是兄标签</p>
+    <h3>我是弟标签</h3>
+
+    <br>
+
+    <h2>情况三：</h2>
+    <h3>我是兄标签</h3>
+    <p>我是弟标签</p>
+
+    <br>
+
+    <div>
+        <h2>情况四：</h2>
+        <p>我是兄标签</p>
+        <h3>我是弟标签</h3>
+    </div>
+</div>
+</body>
+</html>

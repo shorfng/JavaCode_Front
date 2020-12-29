@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-29 11:39
+  PageName：d_list_menu.html
+  Function：创建列表 - 菜单列表
+  URL：http://localhost:8080/h_list/h2_list_create/d_list_menu.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建列表 - 菜单列表</title>
+</head>
+
+<body>
+<menu type="toolbar">
+    <command onclick="alert('Hello World')">命令</command>
+
+    <li>
+        <menu label="File" type="toolbar">
+            <button type="button" onclick="file_new()">新建...</button>
+            <button type="button" onclick="file_open()">打开...</button>
+            <button type="button" onclick="file_save()">保存</button>
+        </menu>
+    </li>
+    <li>
+        <menu label="Edit" type="toolbar">
+            <button type="button" onclick="edit_cut()">剪切</button>
+            <button type="button" onclick="edit_copy()">复制</button>
+            <button type="button" onclick="edit_paste()">粘贴</button>
+        </menu>
+    </li>
+</menu>
+</body>
+</html>

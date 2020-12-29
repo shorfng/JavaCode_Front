@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 18:22
+  PageName：b_attribute_autofocus.html
+  Function：H5新增输入属性 - autofocus
+  URL：http://localhost:8080/j_form/j4_form_input_attribute/b_attribute_autofocus.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增输入属性 - autofocus</title>
+</head>
+
+<body>
+<form>
+    <p>请仔细阅读许可协议：</p>
+
+    <p>
+        <label for="textarea1"></label>
+        <textarea name="textarea1" id="textarea1" cols="45" rows="5">许可协议具体内容......</textarea>
+    </p>
+
+    <p>
+        <!-- 同意按钮自动获取焦点 -->
+        <input type="submit" value="同意" autofocus>
+        <input type="submit" value="拒绝">
+    </p>
+</form>
+
+<!-- 检测浏览器是否支持autofocus属性 -->
+<script>
+    if (!("autofocus" in document.createElement("input"))) {
+        document.getElementById("ok").focus();
+    }
+</script>
+</body>
+</html>

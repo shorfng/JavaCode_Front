@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-30 16:18
+  PageName：b_list_StyleImage.html
+  Function：列表样式 - 自定义项目符号
+  URL：http://localhost:8080/h_list/h3_list_style/b_list_StyleImage.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表样式 - 自定义项目符号</title>
+
+    <style type="text/css">
+        /* 清除页边距 */
+        body {
+            margin: 0;   /* 清除边界 */
+            padding: 0;  /* 清除补白 */
+        }
+
+        /* 列表基本样式 */
+        ul {
+            list-style-type: circle;                        /* 空心圆符号 */
+            list-style-position: inside;                    /* 显示在里面 */
+            list-style-image: url(images/bullet_disk.gif);  /* 自定义列表项目符号 */
+        }
+    </style>
+</head>
+
+<body>
+<ul>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">社区</a></li>
+    <li><a href="#">微博</a></li>
+    <li><a href="#">微信</a></li>
+</ul>
+</body>
+</html>

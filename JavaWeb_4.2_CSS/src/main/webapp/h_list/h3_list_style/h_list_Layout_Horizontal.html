@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-31 9:12
+  PageName：h_list_Layout_Horizontal.html
+  Function：列表布局 - 水平布局
+  URL：http://localhost:8080/h_list/h3_list_style/h_list_Layout_Horizontal.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表布局 - 水平布局</title>
+
+    <style type="text/css">
+        /* 定义列表结构的基本样式 */
+        #menu {
+            margin: 0;                   /* 清除边界 */
+            padding: 0;                  /* 清除补白 */
+            list-style-type: none;       /* 清除项目符号 */
+            float: left;                 /* 定义列表向左浮动 */
+            font: bold 13px Arial;       /* 字体加粗显示 */
+            width: 100%;                 /* 定义宽度 */
+            border: 1px solid #625e00;   /* 定义边框样式 */
+            background: black url(images/menu1.gif) center center repeat-x; /* 定义列表背景图像 */
+        }
+
+        /* 定义列表项目浮动显示 */
+        #menu li {
+            float: left; /* 向左浮动 */
+        }
+
+        /* 定义超链接默认样式 */
+        #menu li a {
+            float: left;                    /* 向左浮动显示 */
+            color: white;                   /* 白色字体 */
+            padding: 9px 11px;              /* 定义补白 */
+            text-decoration: none;          /* 清除下划线 */
+            border-right: 1px solid white;  /* 定义菜单白色分隔线 */
+        }
+
+        /* 定义超链接访问后的样式 */
+        #menu li a:visited {
+            color: white; /* 白色字体 */
+        }
+
+        /* 定义鼠标经过超链接时的样式 */
+        #menu li a:hover, #menu li .current {
+            color: white; /* 白色字体 */
+            background: transparent url(images/menu2.gif) center center repeat-x; /* 替换背景图像 */
+        }
+    </style>
+</head>
+
+<body>
+<h1>网站分类</h1>
+<ul id="menu">
+    <li><a href="#" title="">软件工程</a></li>
+    <li><a href="#" title="">编程语言</a></li>
+    <li><a href="#" title="">软件设计</a></li>
+    <li><a href="#" title="">Web前端</a></li>
+    <li><a href="#" title="">手机开发</a></li>
+    <li><a href="#" title="">所有随笔</a></li>
+</ul>
+</body>
+</html>

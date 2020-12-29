@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-15 18:19
+  PageName：g_Text_CustomFont.html
+  Function：CSS3新增文本样式 - 自定义字体
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/g_Text_CustomFont.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3新增文本样式 - 自定义字体</title>
+
+    <style type="text/css">
+        /* 引入外部字体文件 */
+        @font-face {
+            font-family: "lexograph";    /* 选择默认的字体类型 */
+
+            /* 兼容IE */
+            /*src: url(http://randsco.com//fonts/lexograph.eot);*/
+            src: url(lexograph.eot);
+
+            /* 兼容非IE */
+            /*src: local("Lexographer"), url(http://randsco.com/fonts/lexograph.ttf) format("truetype");  */
+            src: local("Lexographer"), url(lexograph.ttf) format("truetype");
+        }
+
+        h1 {
+            font-family: lexograph, verdana, sans-serif; /* 设置引入字体文件中的lexograph字体类型 */
+            font-size: 4em;
+        }
+    </style>
+</head>
+
+<body>
+<h1>http://www.baidu.com/</h1>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-15 15:22
+  PageName：b2_Text_ShadowEffects_Multicolor.html
+  Function：CSS3新增文本样式 - 阴影特效2：多色阴影
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/b2_Text_ShadowEffects_Multicolor.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3新增文本样式 - 阴影特效2：多色阴影</title>
+
+    <style type="text/css">
+        /* 多色阴影 */
+        p {
+            text-align: center;
+            font: bold 60px helvetica, arial, sans-serif;
+            color: red;
+            text-shadow: 0.2em 0.5em 0.1em #600,
+            -0.3em 0.1em 0.1em #060,
+            0.4em -0.3em 0.1em #006;
+        }
+
+        /* 把阴影设置到文本线框的外面 */
+        p {
+            text-align: center;
+            font: bold 60px helvetica, arial, sans-serif;
+            color: red;
+            border: solid 1px red;
+            text-shadow: 0.5em 0.5em 0.1em #600,
+            -1em 1em 0.1em #060,
+            0.8em -0.8em 0.1em #006;
+        }
+    </style>
+</head>
+
+<body>
+<p>文本阴影：text-shadow</p>
+</body>
+</html>

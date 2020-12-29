@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 18:32
+  PageName：c_control_output.html
+  Function：H5新增控件 - output
+  URL：http://localhost:8080/j_form/j5_form_control/c_control_output.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增控件 - output</title>
+
+    <script type="text/javascript">
+        function multi() {
+            a = parseInt(prompt("请输入第1个数字。", 0));
+            b = parseInt(prompt("请输入第2个数字。", 0));
+            document.forms["form"]["result"].value = a * b;
+        }
+    </script>
+</head>
+
+<body>
+<body onload="multi()">
+<form action="testform.asp" method="get" name="form">
+    两数的乘积为:
+    <output name="result"></output>
+</form>
+</body>
+</html>

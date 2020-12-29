@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-04 16:15
+  PageName：d_brotherSelector.html
+  Function：组合选择器 - 兄弟选择器
+  URL：http://localhost:8080/d2_selector_combinatiion/d_brotherSelector.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器 - 兄弟选择器</title>
+
+    <style type="text/css">
+        h2, p, h3 {
+            margin: 0;
+            padding: 0;
+            height: 30px;
+        }
+
+        p ~ h3 {
+            background-color: #0099FF;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <h2>情况一：</h2>
+    <p>我是兄标签</p>
+    <h3>我是弟标签</h3>
+
+    <br>
+
+    <h2>情况二：</h2>
+    <div>我是阻碍物</div>
+    <p>我是兄标签</p>
+    <h3>我是弟标签</h3>
+
+    <br>
+
+    <h2>情况三：</h2>
+    <h3>我是兄标签</h3>
+    <p>我是弟标签</p>
+
+    <br>
+
+    <div>
+        <h2>情况四：</h2>
+        <p>我是兄标签</p>
+        <h3>我是弟标签</h3>
+    </div>
+</div>
+</body>
+</html>

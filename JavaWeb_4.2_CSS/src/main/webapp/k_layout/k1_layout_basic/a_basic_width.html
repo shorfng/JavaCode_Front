@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-13 11:07
+  PageName：a_basic_width.html
+  Function：盒模型基础 - 定义大小
+  URL：http://localhost:8080/k_layout/k1_layout_basic/a_basic_width.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型基础 - 定义大小</title>
+
+    <style type="text/css">
+        /* 定义div元素公共属性 */
+        div {
+            float: left;                         /* 向左浮动，实现并列显示 */
+            background-image: url(images/TD.jpg); /* 定义背景图像 */
+            background-color: #CC99CC;           /* 定义背景色 */
+            font-size: 32px;                     /* 定义div内显示的字体大小 */
+            color: #FF0000;                      /* 定义div内显示的字体颜色 */
+            text-align: center;                  /* 定义div内显示的字体居中显示 */
+            height: 540px;                       /* 定义高度*/
+        }
+
+        /* 定义第1个div元素属性 */
+        #box1 {
+            width: 50%; /* 占据窗口一半的宽度 */
+        }
+
+        /* 定义第2个div元素属性 */
+        #box2 {
+            width: 50%; /* 占据窗口一半的宽度 */
+        }
+    </style>
+</head>
+
+<body>
+<div id="box1">左边元素</div>
+<div id="box2">右边元素</div>
+</body>
+</html>

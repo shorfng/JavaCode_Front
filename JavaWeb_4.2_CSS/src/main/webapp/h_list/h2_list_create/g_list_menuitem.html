@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-29 17:35
+  PageName：g_list_menuitem.html
+  Function：创建列表 - 弹出菜单（为快捷菜单添加子菜单和图标）
+  URL：http://localhost:8080/h_list/h2_list_create/g_list_menuitem.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建列表 - 弹出菜单</title>
+</head>
+
+<body>
+<img src="images/TD.jpg" width="500"  contextmenu="demo-image" />
+<menu id="demo-image" type="context">
+    <menu label="旋转图像">
+        <!-- 1、快捷菜单的子菜单没有图标 -->
+        <!--<menuitem>旋转90度</menuitem>
+        <menuitem>旋转180度</menuitem>
+        <menuitem>水平翻转</menuitem>
+        <menuitem>垂直翻转</menuitem>-->
+
+        <!-- 2、快捷菜单的子菜单有图标 -->
+        <menuitem icon="images/icon1.png">旋转90度</menuitem>
+        <menuitem icon="images/icon2.png">旋转180度</menuitem>
+        <menuitem icon="images/icon4.png">水平翻转</menuitem>
+        <menuitem icon="images/icon3.png">垂直翻转</menuitem>
+    </menu>
+</menu>
+</body>
+</html>

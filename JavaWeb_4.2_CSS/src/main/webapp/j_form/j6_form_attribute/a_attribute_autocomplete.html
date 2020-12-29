@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 18:33
+  PageName：a_attribute_autocomplete.html
+  Function：H5新增输入属性 - autocomplete
+  URL：http://localhost:8080/j_form/j6_form_attribute/a_attribute_autocomplete.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增输入属性 - autocomplete</title>
+</head>
+
+<body>
+<!-- 自动完成数据列表，数据列表随用户输入而更新 -->
+<h2>输入你最喜欢的城市名称</h2>
+<form autocompelete="on">
+    <input type="text" id="city" list="cityList">
+    <datalist id="cityList" style="display:none;">
+        <option value="BeiJing">BeiJing</option>
+        <option value="QingDao">QingDao</option>
+        <option value="QingZhou">QingZhou</option>
+        <option value="QingHai">QingHai</option>
+    </datalist>
+</form>
+</body>
+</html>

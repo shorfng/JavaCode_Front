@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-15 15:39
+  PageName：b5_Text_ShadowEffects_Stroke.html
+  Function：CSS3新增文本样式 - 阴影特效5：描边文字
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/b5_Text_ShadowEffects_Stroke.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3新增文本样式 - 阴影特效5：描边文字</title>
+
+    <style type="text/css">
+        body {
+            background: #000;
+        }
+
+        /* 思路：分别为文本4个边添加1像素的实体阴影 */
+        p {
+            text-align: center;
+            padding: 24px;
+            margin: 0;
+            font-family: helvetica, arial, sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: #D1D1D1;
+            background: #CCC;
+            text-shadow: -1px 0 black,
+            0 1px black,
+            1px 0 black,
+            0 -1px black;
+        }
+    </style>
+</head>
+
+<body>
+<p>文本阴影：text-shadow</p>
+</body>
+</html>

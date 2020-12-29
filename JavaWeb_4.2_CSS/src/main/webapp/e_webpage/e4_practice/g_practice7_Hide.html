@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-16 11:35
+  PageName：g_practice7_Hide.html
+  Function：实战案例 - 以图代替文字
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/g_practice7_Hide.html
+-->
+
+<!-- 场景：经过处理的文字效果需要用图片在页面中表现，但是又不希望使用img标签插入，
+而是使用h1表示该图片是一个标题，而且是全文中权重值最高的标题-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 以图代替文字</title>
+
+    <style type="text/css">
+        h1 {
+            width: 250px;
+            height: 80px;
+            background: url(images/logo.jpg) no-repeat 0 0;
+
+            /* 方案1：利用text-indent属性将文字“推”到容器之外*/
+            /* overflow:hidden;
+            text-indent: -9999px;*/
+
+            /* 方案2：将行高的值设置大点，超出容器之外，使其不可见 */
+            /*overflow:hidden;
+            line-height: 9999px;*/
+        }
+
+        /* 方案3：设置span标签内的文字不可见，但在页面中占据其原本所占据的空间 */
+        /*h1 span {
+            visibility: hidden;
+        }*/
+
+        /* 方案4：设置span标签内的文字不可见，并且不会在页面中占据其原本所占据的空间 */
+        h1 span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<h1>
+    <span>乐淘正品鞋城</span>
+</h1>
+</body>
+</html>

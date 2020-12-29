@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-14 15:12
+  PageName：b_basic_border.html
+  Function：盒模型基础 - 定义边框
+  URL：http://localhost:8080/k_layout/k1_layout_basic/b_basic_border.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型基础 - 定义边框</title>
+
+    <style type="text/css">
+        /* 定义边框宽度（查看边框与背景图像的关系） */
+        #box1 {
+            height: 200px;                       /* 定义盒子的高度 */
+            width: 200px;                        /* 定义盒子的宽度 */
+            background-image: url(images/TD.jpg); /* 定义盒子的背景图像 */
+            border: 50px dotted red;             /* 定义边框样式为间隔显示 */
+        }
+
+        /* 定义边框颜色 */
+        #box2 {
+            height: 164px;                         /* 定义盒的高度 */
+            width: 240px;                          /* 定义盒的宽度 */
+            padding: 2px;                          /* 定义内补白 */
+            font-size: 16px;                       /* 定义字体大小 */
+            color: #FF0000;                        /* 定义字体显示颜色 */
+            border-style: solid;                   /* 定义边框为实线显示 */
+            border-width: 50px;                    /* 定义边框的宽度 */
+            border-top-color: #aaa;                /* 定义顶边框颜色为十六进制值 */
+            border-right-color: gray;              /* 定义右边框颜色为名称值 */
+            border-bottom-color: rgb(120, 50, 20); /* 定义底边框颜色为RGB值 */
+            border-left-color: auto;               /* 定义左边框颜色将继承字体颜色 */
+        }
+
+        /* 定义边框样式 */
+        #box3 { /*<定义信纸的外框>*/
+            width: 500px;
+            height: 400px;
+            padding: 8px 24px;
+            margin: 6px;
+            border-style: outset; /* 定义信纸边框为3D凸边效果 */
+            border-width: 4px;    /* 定义信纸边框宽度 */
+            border-color: #aaa;   /* 定义信纸边框颜色 */
+            font-size: 14px;
+            color: #D02090;
+            list-style-position: inside; /* 定义列表符号在内部显示 */
+        }
+
+        #box3 h2 { /*<定义标题格式>*/
+            padding-bottom: 12px;
+            border-bottom-style: double; /* 定义标题底边框为双线显示 */
+            border-bottom-width: 6px;    /* 定义标题底边框宽度 */
+            border-bottom-color: #999;   /* 定义标题底边框颜色 */
+            text-align: center;
+            color: #000000;
+        }
+
+        #box3 li {
+            padding: 6px 0;               /* 增加列表项之间的间距 */
+            border-bottom-style: dotted;  /* 定义列表项底边框为点线显示 */
+            border-bottom-width: 1px;     /* 定义列表项底边框宽度 */
+            border-bottom-color: #66CC66; /* 定义列表项底边框颜色 */
+        }
+    </style>
+</head>
+
+<body>
+<!-- 定义边框宽度 -->
+<div id="box1"></div>
+
+<br>
+
+<!-- 定义边框颜色 -->
+<div id="box2">
+    <img src="images/TD.jpg" width="240" height="164" alt=""/>
+</div>
+
+<br>
+
+<!-- 定义边框样式 -->
+<ol id="box3">
+    <h2>边框样式应用</h2>
+    <!--标题-->
+    <li>none：默认值，无边框，不受任何指定的border-width值影响。</li>
+    <!--列表项-->
+    <li>hidden：隐藏边框，IE不支持。</li>
+    <li>dotted：定义点线。</li>
+    <li>dashed：定义虚线。</li>
+    <li>solid：定义实线。</li>
+    <li>double：定义双线边框，两条线及其间隔宽等于指定的border-width值。</li>
+    <li>groove：根据border-color值定义D凹槽。</li>
+    <li>ridge：根据border-color值定义D凸槽。</li>
+    <li>inset：根据border-color值定义D凹边。</li>
+    <li>outset：根据border-color值定义D凸边。</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-03 15:25
+  PageName：c_empty-cells_Style.html
+  Function：表格CSS样式 - 隐藏空单元格
+  URL：http://localhost:8080/i_table/i5_style_table/c_empty-cells_Style.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格CSS样式 - 隐藏空单元格</title>
+
+    <style type="text/css">
+        /* 表格样式 */
+        table {
+            width: 400px;            /* 固定表格宽度 */
+            border: dashed 1px red;  /* 定义虚线表格边框 */
+            empty-cells: hide;       /* 隐藏空单元格 */
+        }
+
+        /* 单元格样式 */
+        th, td {
+            border: solid 1px #000;   /* 定义实线单元格边框 */
+            padding: 4px;             /* 定义单元格内的补白区域 */
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <tr>
+        <td>西</td>
+        <td>东</td>
+    </tr>
+
+    <tr>
+        <td>北</td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

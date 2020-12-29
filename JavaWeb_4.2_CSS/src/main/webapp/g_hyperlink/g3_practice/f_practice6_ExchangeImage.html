@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-26 11:16
+  PageName：f_practice6_ExchangeImage.html
+  Function：实战案例 - 超链接的图像交换样式
+  URL：http://localhost:8080/g_hyperlink/g3_practice/f_practice6_ExchangeImage.html
+-->
+
+<!-- 引用外部图像时所有背景图像组合在一张图上，然后利用css精准定位，显示一半图像，以实现在不同状态下显示为不同的背景图像 -->
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 超链接的图像交换样式</title>
+
+    <style type="text/css">
+        /* 超链接的默认样式 */
+        a {
+            text-decoration:none; 								/* 清除默认的下划线 */
+            display:inline-block; 								/* 行内块状显示 */
+            padding:2px 1em; 									/* 为文本添加补白效果 */
+            height:28px; 										/* 固定高度 */
+            line-height:32px; 									/* 行高等于高度，设计垂直居中 */
+            text-align:center; 									/* 文本水平居中 */
+            background:url(images/b3.gif) no-repeat center top;	/* 定义背景图像1，禁止平铺，居中 */
+            color:#ccc; 										/* 浅灰色字体 */
+        }
+
+        /* 鼠标经过时样式 */
+        a:hover {
+            background-position:center bottom;					/* 定位背景图像，显示下半部分 */
+            color:#fff; 										/* 白色字体 */
+        }
+    </style>
+</head>
+
+<body>
+<div id="quickSummary">
+    <p class="p1">
+        <span>展示以
+            <acronym title="cascading style sheets">CSS</acronym>技术为基础，并提供超强的视觉冲击力。只要选择列表中任意一个样式表，就可以将它加载到本页面中，并呈现不同的设计效果。
+        </span>
+    </p>
+
+    <p class="p2">
+        <span>下载
+            <a title="这个页面的HTML源代码不能够被改动。" href="http://www.csszengarden.com/zengarden-sample.html">HTML文档</a> 和
+            <a title="这个页面的CSS样式表文件，你可以更改它。" href="http://www.csszengarden.com/zengarden-sample.css">CSS文件</a>。
+        </span>
+    </p>
+</div>
+</body>
+</html>

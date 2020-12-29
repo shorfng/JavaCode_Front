@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-19 14:37
+  PageName：e_imagegradient_WebKit5.html
+  Function：渐变背景 - WebKit（径向渐变_非同心圆）
+  URL：http://localhost:8080/f_image/f4_image_gradientbg/e_imagegradient_WebKit5.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>渐变背景 - WebKit（径向渐变_非同心圆）</title>
+
+    <style type="text/css">
+        div {
+            width: 400px;
+            height: 200px;
+            border: 2px solid #FCF;
+            padding: 4px;
+            /* 径向渐变_非同心圆 */
+            background: -webkit-gradient(radial, 120 100, 10, 200 100, 100, from(red), to(green));
+            -webkit-background-origin: padding-box;
+            -webkit-background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

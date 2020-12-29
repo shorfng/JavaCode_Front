@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-31 9:26
+  PageName：a_practice1_NavigationBar.html
+  Function：实战案例 - 设计导航条（垂直、水平导航条）
+  URL：http://localhost:8080/h_list/h4_practice/a_practice1_NavigationBar.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 设计导航条（垂直、水平导航条）</title>
+
+    <link href="images/base.css" rel="stylesheet" type="text/css">
+    <style type="text/css" media="all"></style>
+    <style type="text/css">
+        /* 为列表元素进行定位，设置基本属性*/
+        .menu {
+            position: absolute;    /* 绝对定位 */
+            top: 120px;            /* 坐标定位，距离顶部距离 */
+            left: 40px;            /* 坐标定位，距离左侧距离 */
+            padding: 0;            /* 清除默认缩进样式 */
+            margin: 0;             /* 清除默认缩进样式 */
+            list-style: none;      /* 清除项目符号 */
+            white-space: nowrap;   /* 禁止文本换行 */
+        }
+
+        /* 定义列表项浮动显示，设计水平显示 */
+        .menu li {
+            float: left;      /* 浮动显示 */
+            min-width: 100px; /* 最窄显示宽度 */
+        }
+
+        /* 定义超链接元素a以块状显示，并清除默认的下划线 */
+        .menu a {
+            position: relative;    /* 定义定位包含框，为后面的绝对定位做坐标参考 */
+            display: block;        /* 块状显示 */
+            text-decoration: none; /* 清除下划线 */
+            min-width: 100px;      /* 最窄显示宽度 */
+
+        }
+
+        * html .menu a {
+            width: 100px;  /* 兼容不支持min-width属性的浏览器 */
+        }
+
+        /* 为超链接元素内包含的span元素定义菜单正常显示样式 */
+        .menu a span {
+            display: block;       /* 块状显示 */
+            color: #F911B2;       /* 字体颜色 */
+            background: #FFF4FC;  /* 背景颜色 */
+            border: solid #fff;   /* 增加边框 */
+            border-width: 0 2px 2px 2px; /* 定义边框宽度 */
+            text-align: center;   /* 居中显示 */
+            padding: 4px 16px;    /* 增加内边距 */
+            cursor: pointer;      /* 定义鼠标指针以手形显示 */
+            min-width: 66px;      /* 最窄显示宽度 */
+        }
+
+        /* 兼容IE7及以下版本*/
+        * html .menu a span {
+            width: 100px; /* 限制最低宽度 */
+            cursor: hand; /* 定义鼠标指针以手形显示 */
+            w\idth: 66px; /* 兼容IE版本 */
+        }
+
+        /* 利用a元素内包含的b元素定义导航条底部的下划线 */
+        .menu a b {
+            display: block;                    /* 块状显示 */
+            border-bottom: 2px solid #F911B2;  /* 绘制导航条的下划线 */
+        }
+
+        /* 隐藏em元素 */
+        .menu a em {
+            display: none;
+        }
+
+        /* 利用em元素绘制鼠标经过超链接时出现向下箭头，同时改变列表项背景色为洋红色，设置菜单项字体颜色为白色 */
+        .menu a:hover {
+            background: #fff;  /* 经过超链接背景色变为白色 */
+        }
+
+        .menu a:hover span {
+            color: #fff;         /* 经过超链接span字体颜色变为白色 */
+            background: #F911B2; /* 经过超链接span背景色变为洋红色 */
+        }
+
+        /* 绘制鼠标经过时动态显示为向下三角形效果 */
+        .menu a:hover em {
+            display: block;               /* 块状显示 */
+            overflow: hidden;             /* 隐藏超出制定宽度和高度的区域 */
+            border-style: solid;          /* 实边边框*/
+            border-color: #F911B2 #fff;   /* 边框颜色 */
+            border-width: 6px 6px 0 6px;  /* 边框宽度 */
+            height: 3px;                  /* em元素的高度，截取下部分，显示上半部分的三角形 */
+            position: absolute;           /* 绝对定位，好准确定位到菜单项底部中间 */
+            left: 50%;                    /* 水平居中 */
+            margin-left: -6px;            /* 通过取左边界负值以实现三角形真正居中 */
+        }
+    </style>
+</head>
+
+<body id="css-zen-garden">
+<div id="container">
+    <div id="intro">
+        <div id="pageHeader">
+            <h1><span>CSS Zen Garden</span></h1>
+            <h2><span><acronym title="cascading style sheets">CSS</acronym>设计之美</span></h2>
+
+            <ul class="menu">
+                <li><a href="#"> <b><span>查看样式表CSS</span></b><em></em></a></li>
+                <li><a href="#"> <b><span>CSS参考资料</span></b><em></em></a></li>
+                <li><a href="#"> <b><span>常见问题</span></b><em></em></a></li>
+                <li><a href="#"> <b><span>投稿投稿</span></b><em></em></a></li>
+                <li><a href="#"> <b><span>翻译文件</span></b><em></em></a></li>
+            </ul>
+        </div>
+        <div id="quickSummary">
+            <p class="p1">
+                <span>展示以<acronym title="cascading style sheets">CSS</acronym>技术为基础，并提供超强的视觉冲击力。只要选择列表中任意一个样式表，就可以将它加载到本页面中，并呈现不同的设计效果。</span>
+            </p>
+
+            <p class="p2">
+                <span>下载
+                    <a title="这个页面的HTML源代码不能够被改动。"href="http://www.csszengarden.com/zengarden-sample.html">HTML文档</a> 和
+                    <a title="这个页面的CSS样式表文件，你可以更改它。" href="http://www.csszengarden.com/zengarden-sample.css">CSS文件</a>。
+                </span>
+            </p>
+        </div>
+
+        <div id="preamble">
+            <h3><span>启蒙之路</span></h3>
+            <p class="p1">
+                <span>不同浏览器随意定义标签，导致无法相互兼容的
+                    <acronym title="document object model">DOM</acronym>结构，或者提供缺乏标准支持的
+                    <acronym title="cascading style sheets">CSS</acronym>等陋习随处可见，如今当使用这些不兼容的标签和样式时，设计之路会一路坎坷。
+                </span>
+            </p>
+
+            <p class="p2">
+                <span>现在，我们必须清除以前为了兼容不同浏览器而使用的一些过时的小技巧。感谢
+                    <acronym title="world wide web consortium">W3C</acronym>、
+                    <acronym title="web standards project">WASP</acronym>等标准组织，以及浏览器厂家和开发师们的不懈努力，我们终于能够进入Web设计的标准时代。
+                </span>
+            </p>
+
+            <p class="p3">
+                <span>CSS ZenGarden（样式表禅意花园）邀请您发挥自己的想象力，构思一个专业级的网页。让我们用慧眼来审视，充满理想和激情去学习CSS这个不朽的技术，最终使自己能够达到技术和艺术合而为一的最高境界。</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="linkList">
+        <div id="linkList2">
+            <div id="lresources">
+                <h3 class="resources"><span>参考资源</span></h3>
+                <ul>
+                    <li><a href="#">查看这个设计的样式表CSS</a>
+                    <li><a href="#">CSS参考资料</a>
+                    <li><a href="#">常见问题</a>
+                    <li><a href="#">投稿</a>
+                    <li><a href="#">翻译文件</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

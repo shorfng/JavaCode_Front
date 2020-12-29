@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-19 14:37
+  PageName：c_imagegradient_WebKit3.html
+  Function：渐变背景 - WebKit（二重渐变，直线渐变）
+  URL：http://localhost:8080/f_image/f4_image_gradientbg/c_imagegradient_WebKit3.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>渐变背景 - WebKit（二重渐变，直线渐变）</title>
+
+    <style type="text/css">
+        div {
+            width: 400px;
+            height: 200px;
+            border: 2px solid #FCF;
+            padding: 4px;
+            /* 二重渐变：从顶部到底部，从蓝色到白色渐变显示，再从黑色到红色渐变显示 */
+            background: -webkit-gradient(linear, left top, left bottom, from(blue), to(red), color-stop(0.5, #fff), color-stop(0.5, #000));
+            -webkit-background-origin: padding-box;
+            -webkit-background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

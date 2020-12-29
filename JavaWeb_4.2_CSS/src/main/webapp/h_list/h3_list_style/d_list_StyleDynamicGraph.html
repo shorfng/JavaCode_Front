@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-30 17:09
+  PageName：d_list_StyleDynamicGraph.html
+  Function：列表样式 - 动态图像项目列表符号
+  URL：http://localhost:8080/h_list/h3_list_style/d_list_StyleDynamicGraph.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表样式 - 动态图像项目列表符号</title>
+
+    <style type="text/css">
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border-bottom: 1px dashed #aaa;
+            width: 20em; /* 固定项目列表的宽度 */
+        }
+
+        li {
+            padding: 0.5em;
+            border-top: 1px dashed #aaa;
+        }
+
+        /* 超链接样式 */
+        li a {
+            display: block;       /* 块状显示 */
+            padding-left: 1.5em;  /* 为背景图像显示挤出位置 */
+            background: url(images/arrow3.gif) left center no-repeat; /* 固定背景图像在左侧 */
+            text-decoration: none; /* 清除超链接的下划线 */
+        }
+
+        /* 定义未访问超链接背景图像 */
+        li a:link {
+            background: url(images/arrow3.gif) right center no-repeat; /* 固定背景图像在左侧 */
+        }
+
+        /* 定义已访问超链接背景图像 */
+        li a:visited {
+            background: url(images/arrow5.gif) right center no-repeat; /* 替换左侧背景图像 */
+        }
+
+        /* 定义鼠标经过超链接背景图像 */
+        li a:hover {
+            background: url(images/arrow4.gif) left center no-repeat; /* 固定背景图像到右侧 */
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>新闻</h1>
+<ul>
+    <li><a href="#">军事</a></li>
+    <li><a href="#">财经</a></li>
+    <li><a href="#">体育</a></li>
+    <li><a href="#">娱乐</a></li>
+    <li><a href="#">科技</a></li>
+</ul>
+</body>
+</html>

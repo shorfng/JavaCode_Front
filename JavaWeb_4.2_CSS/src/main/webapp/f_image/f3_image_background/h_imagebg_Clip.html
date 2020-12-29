@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-18 17:39
+  PageName：h_imagebg_Clip.html
+  Function：设置背景图像 - 裁剪区域
+  URL：http://localhost:8080/f_image/f3_image_background/h_imagebg_Clip.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置背景图像 - 裁剪区域</title>
+
+    <style type="text/css">
+        div {
+            height: 50px;
+            width: 200px;
+            border: solid 50px gray;
+            padding: 50px;
+            background: url(images/bg2.jpg) no-repeat;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+            -moz-background-clip: content-box;
+            -webkit-background-clip: content-box;
+            -o-background-clip: content-box;
+            -khtml-background-clip: content-box;
+            background-clip: content-box;
+        }
+
+        button {
+            height: 40px;
+            width: 150px;
+            padding: 1px;
+            cursor: pointer;
+            color: #fff;
+            border: 3px double #95071b;
+            border-right-color: #650513;
+            border-bottom-color: #650513;
+            background: url(images/img5.jpg) no-repeat; /* 避免背景图像重复平铺到边框区域，所以禁止平铺 */
+            -moz-background-origin: content-box;
+            -webkit-background-origin: content-box;
+            background-origin: content-box; /* 设计背景图像的定位坐标点为元素内容区域的左上角 */
+            -moz-background-clip: content-box;
+            -webkit-background-clip: content-box;
+            background-clip: content-box; /* 设计背景图像的以内容区域的边缘进行裁切背景图像 */
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+<button>导航按钮 >></button>
+</body>
+</html>

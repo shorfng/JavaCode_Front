@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-01 10:14
+  PageName：f_Creat_colgroup.html
+  Function：创建表格 - 列分组的表格（colgroup）
+  URL：http://localhost:8080/i_table/i2_creat_table/f_Creat_colgroup.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建表格 - 列分组的表格（colgroup）</title>
+
+    <!-- 使用colgroup元素为表格中的每列定义不同的宽度 -->
+    <style type="text/css">
+        .col1 {
+            width: 25%;
+            background-color: red;
+        }
+
+        .col2 {
+            width: 50%;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+<table width="100%" border="1">
+    <!-- 使用colgroup元素为表格中的每列定义不同的宽度 -->
+    <colgroup span="2" class="col1"></colgroup> <!-- 每行的前2个单元格为第一列组，应用col1样式 -->
+    <colgroup class="col2"></colgroup>  <!-- 每行的剩下的单元格为第二列组，应用col2样式 -->
+
+    <tr>
+        <td>慈母手中线，</td>
+        <td>游子身上衣。</td>
+        <td>临行密密缝，</td>
+    </tr>
+
+    <tr>
+        <td>意恐迟迟归。</td>
+        <td>谁言寸草心，</td>
+        <td>报得三春晖。</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- 把col嵌入到colgroup中 -->
+<table width="100%" border="1">
+    <colgroup>
+        <col span="2" class="col1"/>
+        <col class="col2"/>
+    </colgroup>
+
+    <tr>
+        <td>慈母手中线，</td>
+        <td>游子身上衣。</td>
+        <td>临行密密缝，</td>
+    </tr>
+
+    <tr>
+        <td>意恐迟迟归。</td>
+        <td>谁言寸草心，</td>
+        <td>报得三春晖。</td>
+    </tr>
+</table>
+</body>
+</html>

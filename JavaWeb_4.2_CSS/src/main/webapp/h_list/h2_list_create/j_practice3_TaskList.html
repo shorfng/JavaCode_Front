@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-29 18:00
+  PageName：j_practice3_TaskList.html
+  Function：实战案例 - 任务列表
+  URL：http://localhost:8080/h_list/h2_list_create/j_practice3_TaskList.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 任务列表</title>
+
+    <script>
+        function addNewTask() {
+            var list = document.createElement('li');
+            list.className = 'task-item';
+            list.innerHTML = '<input type="checkbox" name="" value="done">新任务';
+            var taskList = document.getElementById('task');
+            taskList.appendChild(list);
+        }
+    </script>
+</head>
+
+<body>
+<section id="on-web-app" contextmenu="add_task">
+    <header>
+        <h3>任务列表</h3>
+    </header>
+    <ul id="task">
+        <li class="task-item"><input type="checkbox" name="" value="done">任务一</li>
+        <li class="task-item"><input type="checkbox" name="" value="done">任务二</li>
+        <li class="task-item"><input type="checkbox" name="" value="done">任务三</li>
+    </ul>
+</section>
+
+<menu id="add_task" type="context">
+    <menuitem onclick="addNewTask()" icon="images/add.png">添加新任务</menuitem>
+</menu>
+</body>
+</html>

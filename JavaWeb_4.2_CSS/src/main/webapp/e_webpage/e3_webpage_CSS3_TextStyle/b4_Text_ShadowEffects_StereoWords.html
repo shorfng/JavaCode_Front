@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-15 15:33
+  PageName：b4_Text_ShadowEffects_StereoWords.html
+  Function：CSS3新增文本样式 - 阴影特效4：立体文字
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/b4_Text_ShadowEffects_StereoWords.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3新增文本样式 - 阴影特效4：立体文字</title>
+
+    <style type="text/css">
+        body {
+            background: #000;
+        }
+
+        /* 凸起的文字效果 */
+        p {
+            text-align: center;
+            padding: 24px;
+            margin: 0;
+            font-family: helvetica, arial, sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: #D1D1D1;
+            background: #CCC;
+            text-shadow: -1px -1px white,
+            1px 1px #333;
+        }
+
+        /* 凹下的文字效果 */
+        p {
+            text-align: center;
+            padding: 24px;
+            margin: 0;
+            font-family: helvetica, arial, sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: #D1D1D1;
+            background: #CCC;
+            text-shadow: 1px 1px white,
+            -1px -1px #333;
+        }
+    </style>
+</head>
+
+<body>
+<p>文本阴影：text-shadow</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-30 17:01
+  PageName：c_list_StyleBg.html
+  Function：列表样式 - 使用背景图设计项目符号
+  URL：http://localhost:8080/h_list/h3_list_style/c_list_StyleBg.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表样式 - 使用背景图设计项目符号</title>
+
+    <style type="text/css">
+        /* 清除列默认样式 */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 定义列表项目的样式 */
+        li {
+            background-image: url(images/bullet_sarrow.gif);  /* 定义背景图像 */
+            background-position: left center;                 /* 精确定位背景图像的位置 */
+            background-repeat: no-repeat;                     /* 禁止背景图像平铺显示 */
+            padding-left: 1em;                                /* 为背景图像挤出空白区域 */
+        }
+    </style>
+</head>
+
+<body>
+<ul>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">社区</a></li>
+    <li><a href="#">微博</a></li>
+    <li><a href="#">微信</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-31 13:54
+  PageName：b_practice2_MultilevelMenu.html
+  Function：实战案例 - 设计多级菜单
+  URL：http://localhost:8080/h_list/h4_practice/b_practice2_MultilevelMenu.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 设计多级菜单</title>
+
+    <link href="images/base.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #nav {
+            position: absolute;  /* 绝对定位 */
+            z-index: 1;          /* 定义层叠顺序 */
+            left: 0px;           /* 左侧距离 */
+            top: 124px;          /* 顶部距离 */
+            width: 700px;        /* 宽度 */
+            height: 30px;        /* 高度 */
+            padding: 0px 4px;    /* 增加左右内边距 */
+        }
+
+        /* 兼容非IE浏览器 */
+        html > /**/ body #nav {
+            left: 40px;   /* 左侧距离 */
+            top: 112px;   /* 顶部距离 */
+        }
+
+        /* 清除缩进 */
+        #nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 清除下划线 */
+        #nav li a {
+            text-decoration: none;
+        }
+
+        /* 让列表项浮动并列显示，并定义主菜单的显示样式 */
+        #nav li {
+            list-style: none;    /* 清除项目符号 */
+            text-align: center;  /* 居中对齐 */
+            font-weight: bold;   /* 加粗显示 */
+            float: left;         /* 清除项目符号 */
+        }
+
+        /* 定义下拉子菜单的显示样式 */
+        #nav .list {
+            line-height: 20px;    /* 行高 */
+            text-align: left;     /* 左对齐 */
+            padding: 2px;         /* 内边距 */
+            font-weight: normal;  /* 正常字体，不加粗显示 */
+        }
+
+        #nav .list a {
+            color: #FF3AC1;            /* 下拉子菜单中超链接字体样色 */
+            text-decoration: none;     /* 清除下划线 */
+            float: left;               /* 浮动超链接显示 */
+            width: 100px;              /* 超链接的宽度 */
+            padding: 3px 5px 0px 5px;  /* 内边距 */
+        }
+
+        /* 定义鼠标经过子菜单时显示的样子 */
+        #nav .list a:hover {
+            color: white;               /* 字体颜色 */
+            padding: 3px 3px 0px 20px;  /* 内边距 */
+            width: 88px;                /* 宽度 */
+            background-color: #FF3AC1;  /* 背景色 */
+        }
+
+        /* 鼠标经过主菜单时所要应用的样式 */
+        #nav .menu1 {
+            width: 120px;                /* 主菜单宽度 */
+            height: auto;                /* 主菜单高度 */
+            margin: 6px 4px 0px 0px;     /* 增加外边框 */
+            border: 1px solid #FF3AC1;   /* 设置一个边框 */
+            background-color: #F1FBEC;   /* 定义背景色 */
+            color: #FF3AC1;              /* 字体颜色 */
+            padding: 6px 0px 0px 0px;    /* 定义内边距 */
+            cursor: hand;                /* 定义鼠标样式，手形 */
+            overflow-y: hidden;          /* 隐藏y轴超出的区域 */
+            filter: Alpha(opacity=70);   /* 在IE下设置透明度 */
+            -moz-opacity: 0.7;           /* 在非IE下设置透明度 */
+        }
+
+        /* 鼠标离开主菜单时所要应用的样式 */
+        #nav .menu2 {
+            width: 120px;
+            height: 18px;
+            margin: 6px 4px 0px 0px;
+            background-color: #F5F5F5;
+            color: #999999;
+            border: 1px solid #EEE8DD;
+            padding: 6px 0px 0px 0px;
+            overflow-y: hidden;
+            cursor: hand;
+        }
+    </style>
+</head>
+
+<body id="css-zen-garden">
+<div id="container">
+    <div id="intro">
+        <div id="pageHeader">
+            <h1><span>CSS Zen Garden</span></h1>
+            <h2><span><acronym title="cascading style sheets">CSS</acronym>设计之美</span></h2>
+
+            <!-- 设计多级菜单 -->
+            <ul id="nav">
+                <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+                    <a href="#">查看样式表CSS</a>
+                    <ul class="list">
+                        <li><a href="#">子菜单1</a></li>
+                        <li><a href="#">子菜单2</a></li>
+                        <li><a href="#">子菜单3</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+                    <a href="#">CSS参考资料</a>
+                    <ul class="list">
+                        <li><a href="#">子菜单1</a></li>
+                        <li><a href="#">子菜单2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+                    <a href="#">常见问题</a>
+                    <ul class="list">
+                        <li><a href="#">子菜单1</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+                    <a href="#">投稿</a>
+                </li>
+
+                <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+                    <a href="#">翻译文件</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quickSummary">
+        <p class="p1">
+            <span>展示以<acronym title="cascading style sheets">CSS</acronym>技术为基础，并提供超强的视觉冲击力。只要选择列表中任意一个样式表，就可以将它加载到本页面中，并呈现不同的设计效果。</span>
+        </p>
+
+        <p class="p2">
+                <span>下载
+                    <a title="这个页面的HTML源代码不能够被改动。" href="http://www.csszengarden.com/zengarden-sample.html">HTML文档</a> 和
+                    <a title="这个页面的CSS样式表文件，你可以更改它。" href="http://www.csszengarden.com/zengarden-sample.css">CSS文件</a>。
+                </span>
+        </p>
+    </div>
+
+    <div id="preamble">
+        <h3><span>启蒙之路</span></h3>
+        <p class="p1">
+                <span>不同浏览器随意定义标签，导致无法相互兼容的
+                    <acronym title="document object model">DOM</acronym>结构，或者提供缺乏标准支持的
+                    <acronym title="cascading style sheets">CSS</acronym>等陋习随处可见，如今当使用这些不兼容的标签和样式时，设计之路会一路坎坷。
+                </span>
+        </p>
+
+        <p class="p2">
+                <span>现在，我们必须清除以前为了兼容不同浏览器而使用的一些过时的小技巧。感谢
+                    <acronym title="world wide web consortium">W3C</acronym>、
+                    <acronym title="web standards project">WASP</acronym>等标准组织，以及浏览器厂家和开发师们的不懈努力，我们终于能够进入Web设计的标准时代。
+                </span>
+        </p>
+
+        <p class="p3">
+            <span>CSS ZenGarden（样式表禅意花园）邀请您发挥自己的想象力，构思一个专业级的网页。让我们用慧眼来审视，充满理想和激情去学习CSS这个不朽的技术，最终使自己能够达到技术和艺术合而为一的最高境界。</span>
+        </p>
+    </div>
+</div>
+
+<div id="linkList">
+    <div id="linkList2">
+        <div id="lresources">
+            <h3 class="resources"><span>参考资源</span></h3>
+            <ul>
+                <li><a href="#">查看这个设计的样式表CSS</a>
+                <li><a href="#">CSS参考资料</a>
+                <li><a href="#">常见问题</a>
+                <li><a href="#">投稿</a>
+                <li><a href="#">翻译文件</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

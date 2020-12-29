@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-12 18:30
+  PageName：a_Text_Shadow.html
+  Function：CSS3新增文本样式 - 文本阴影
+  URL：http://localhost:8080/e3_webpage_CSS3_TextStyle/a_Text_Shadow.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3新增文本样式 - 文本阴影</title>
+
+    <style type="text/css">
+        /* 定义右下角阴影 */
+        p {
+            text-align: center;
+            font: bold 60px helvetica, arial, sans-serif;
+            color: #999;
+            text-shadow: 0.1em 0.1em #333;
+        }
+
+        /* 定义右上角阴影 */
+        p {
+            text-shadow: 0.1em -0.1em #333;
+        }
+
+        /* 定义左下角阴影 */
+        p {
+            text-shadow: -0.1em 0.1em #333;
+        }
+
+        /* 定义左上角阴影 */
+        p {
+            text-shadow: -0.1em -0.1em #333;
+        }
+
+        /* 定义模糊阴影*/
+        p {
+            text-shadow: 0.1em 0.1em 0.3em #333;
+        }
+
+        /* 定义模糊阴影 */
+        p {
+            text-shadow: 0.1em 0.1em 0.2em black;
+        }
+    </style>
+</head>
+
+<body>
+<p>文本阴影：text-shadow</p>
+</body>
+</html>
+
+<!-- 总结：text-shadow属性值 -->
+<!-- 第1个值表示水平位移 -->
+<!-- 第2个值表示垂直位移，正值偏右或偏下，负值偏左或偏上 -->
+<!-- 第3个值表示模糊半径 -->

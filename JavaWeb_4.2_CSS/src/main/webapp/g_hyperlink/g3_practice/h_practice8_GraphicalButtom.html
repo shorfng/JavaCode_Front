@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-26 14:48
+  PageName：h_practice8_GraphicalButtom.html
+  Function：实战案例 - 超链接的图形化按钮样式
+  URL：http://localhost:8080/g_hyperlink/g3_practice/h_practice8_GraphicalButtom.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 超链接的图形化按钮样式</title>
+
+    <style type="text/css">
+        /* 定义超链接样式 */
+        a {
+            background: url('images/left1.gif') no-repeat top left; /* 把短截背景图像固定在左侧 */
+            display: block;          /* 以块状显示，这样能够定义大小 */
+            float: left;             /* 浮动显示，这样a元素能够自动收缩宽度，以正好包容文本 */
+            padding-left: 8px;       /* 增加左侧内边距，该宽度正好与上面定义的背景图像同宽 */
+            font: bold 13px Arial;   /* 超链接文本字体属性 */
+            line-height: 22px;       /* 定义行高 */
+            height: 30px;            /* 定义按钮高度 */
+            color: white;            /* 字体颜色 */
+            margin-left: 6px;        /* 左侧外边距 */
+            text-decoration: none;   /* 清除默认的下划线样式 */
+        }
+
+        a span {
+            background: url('images/right1.gif') no-repeat top right;  /* 定义长截背景图像 */
+            display: block;              /* 块状显示 */
+            padding: 4px 10px 4px 2px;   /* 增加内边距 */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<a href="#"><span>按钮</span></a>
+<a href="#"><span>超链接</span></a>
+<a href="#"><span>图像按钮</span></a>
+<a href="#"><span>扩展性按钮</span></a>
+<a href="#"><span>能够定义很多字数的文本链接</span></a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-12-04 17:21
+  PageName：d_perfect_bordercolor.html
+  Function：CSS3完善盒模型 - 定义多色边框
+  URL：http://localhost:8080/k_layout/k2_layout_perfect/d_perfect_bordercolor.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3完善盒模型 - 定义多色边框</title>
+
+    <style type="text/css">
+        /* 定义渐变边框效果 */
+        div {
+            border: 50px solid #dedede;
+            height: 100px;
+            width: 600px;
+            /* 兼容Mozilla Gecko引擎 */
+            -moz-border-bottom-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            -moz-border-top-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            -moz-border-left-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            -moz-border-right-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            /* 标准用法 */
+            border-bottom-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            border-top-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            border-left-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+            border-right-colors: #100 #200 #300 #400 #500 #600 #700 #800 #900 #a00;
+        }
+
+        /* 放大后的边框效果 */
+        p {
+            border: 2px solid #dedede;
+            height: 60px;
+            width: 200px;
+            background:url(images/1.jpg);
+            -moz-border-right-colors:#333 #aaa;
+            -moz-border-bottom-colors:#333 #aaa;
+            -moz-border-top-colors:#aaa #666;
+            -moz-border-left-colors:#aaa #666;
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+<p></p>
+</body>
+</html>

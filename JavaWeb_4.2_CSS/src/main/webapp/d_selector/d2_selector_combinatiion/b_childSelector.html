@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-04 9:45
+  PageName：b_childSelector.html
+  Function：组合选择器 - 子选择器
+  URL：http://localhost:8080/d2_selector_combinatiion/b_childSelector.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器 - 子选择器</title>
+
+    <style type="text/css">
+        /* span元素的默认样式 */
+        span{
+            font-size: 12px;
+        }
+
+        /* div元素包含的span子元素的默认样式 */
+        div > span{
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>
+    <span>span元素的默认样式</span>
+</h2>
+
+<div id="box">
+    <span class="font24px">div元素包含的span子元素的默认样式</span>
+</div>
+</body>
+</html>

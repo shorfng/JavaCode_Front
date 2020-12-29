@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-18 16:38
+  PageName：e_imagebg_Position.html
+  Function：设置背景图像 - 显示位置
+  URL：http://localhost:8080/f_image/f3_image_background/e_imagebg_Position.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置背景图像 - 显示位置</title>
+
+    <style type="text/css" media="all">
+        /* 定义网页背景色、居中显示、字体颜色 */
+        body {
+            background: #DFDFDF;
+            text-align: center;
+            color: #454545;
+        }
+
+        /* 清除段落和标题的默认边距 */
+        p, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        #explanation {
+            background-color: #ffffff;  /* 白色背景，填充所有区域 */
+            background-repeat: repeat-y; /* 在垂直方向上平铺背景图像 */
+            background-image: url(images/img_explanation.jpg); /* 指定背景图像 */
+            background-position: left bottom; /* 定位背景图像位于左下角 */
+            width: 546px;
+            margin: 0 auto;
+            font-size: 13px;
+            line-height: 1.6em;
+            text-indent: 2em;
+        }
+
+        #explanation h3 {
+            background: url(images/title_explanation.gif) no-repeat;  /* 顶部背景图像，不平铺 */
+            height: 39px;
+        }
+
+        #explanation h3 span {
+            display: none;  /* 隐藏标题栏内信息 */
+        }
+
+        #explanation p {
+            background: url(images/right_bg.gif) right repeat-y; /* 定义右侧背景图像，垂直平铺 */
+        }
+
+        #explanation .p2 span {
+            padding-bottom: 20px;   /* 增加第二段底部内边距，显示背景图像 */
+            background: url(images/right_bottom.gif) bottom no-repeat;  /* 底部背景图像，不平铺 */
+        }
+
+        /* 定义段落文本左侧的内边距，以便显示左侧背景图像 */
+        #explanation p span {
+            padding: 0 15px 10px 77px;
+            display: block;   /* 定义块状显示，内边距才有效*/
+            text-align: left; /* 文本左对齐 */
+        }
+
+        /* 定义首字下沉效果 */
+        #explanation p .first {
+            font-size: 60px;
+            float: left;       /* 向左浮动 */
+            line-height: 1em;
+            padding: 0;        /* 清除上面样式为段落定义的内边距 */
+            color: #820015;
+        }
+    </style>
+</head>
+
+<body>
+<div id="explanation">
+    <h3><span>这是什么？</span></h3>
+    <p class="p1">
+        <span>
+            <span class="first">对</span>于网页设计师来说应该好好研究
+            <acronym title="cascading style sheets">CSS</acronym>。Zen Garden致力于推广和使用CSS技术，努力激发和鼓励您的灵感和参与。读者可以从浏览高手的设计作品入门。只要选择列表中的任一个样式表，就可以将它加载到这个页面中。
+            <acronym title="hypertext markup language">HTML
+            </acronym>文档结构始终不变，但是读者可以自由地修改和定义
+            <acronym title="cascading style sheets">CSS</acronym>样式表。
+        </span>
+    </p>
+
+    <p class="p2">
+        <span>
+            <acronym title="cascading style sheets">CSS</acronym>
+            具有强大的功能，可以自由控制HTML结构。当然读者需要拥有驾驭CSS技术的能力和创意的灵感，同时亲自动手，用具体的实例展示CSS的魅力，展示个人的才华。截至目前为止，很多Web设计师和程序员已经介绍过许多关于CSS应用技巧和兼容技术的各种技巧和案例。而平面设计师还没有足够重视CSS的潜力。读者是不是需要从现在开始呢？
+        </span>
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-17 16:41
+  PageName：e_imageStyle_Opacity.html
+  Function：图像不透明度
+  URL：http://localhost:8080/f_image/f2_image_Style/e_imageStyle_Opacity.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>图像不透明度</title>
+
+    <style type="text/css">
+        img {
+            width: 300px;
+        }
+
+        /* 透明度样式 */
+        .opacity {
+            opacity: 0.3;                /* 标准用法 */
+            filter: alpha(opacity=30);   /* 兼容IE早期版本浏览器 */
+            -moz-opacity: 0.3;           /* 兼容Firefox浏览器 */
+        }
+    </style>
+</head>
+
+<body>
+<img src="images/TD.jpg" title="图像不透明度"/>
+<img class="opacity" src="images/TD.jpg" title="图像透明度为0.3"/>
+</body>
+</html>

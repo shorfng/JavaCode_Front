@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-17 17:06
+  PageName：f_imageStyle_Radius.html
+  Function：圆角图像
+  URL：http://localhost:8080/f_image/f2_image_Style/f_imageStyle_Radius.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>圆角图像</title>
+
+    <style type="text/css">
+        img {
+            width: 300px;
+            border: solid 1px #eee;
+        }
+
+        .r1 {
+            -moz-border-radius: 12px;     /* 兼容Gecko引擎 */
+            -webkit-border-radius: 12px;  /* 兼容Webkit引擎 */
+            border-radius: 12px;          /* 固定12像素的圆角 */
+        }
+
+        .r2 {
+            -moz-border-radius: 50%;     /* 兼容Gecko引擎 */
+            -webkit-border-radius: 50%;  /* 兼容Webkit引擎 */
+            border-radius: 50%;          /* 弹性取值50%的椭圆圆角 */
+        }
+    </style>
+</head>
+
+<body>
+<img class="r1" src="images/TD.jpg" title="圆角图像"/>
+<img class="r2" src="images/TD.jpg" title="椭圆图像"/>  <!-- 当原图片宽度和高度不同时，为椭圆 -->
+<img class="r2" src="images/TD.jpg" title="圆形图像"/>  <!-- 当原图片宽度和高度相同时，为圆形 -->
+</body>
+</html>

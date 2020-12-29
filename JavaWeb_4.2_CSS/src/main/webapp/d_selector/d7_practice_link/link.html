@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-14 18:11
+  PageName：link.html
+  Function：实战案例 - 设计超链接样式
+  URL：http://localhost:8080/d7_practice_link/link.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 设计超链接样式</title>
+
+    <style type="text/css">
+        /* 模拟百度文库的页面效果 */
+        body {
+            background: url(images/bg2.jpg) no-repeat;
+            width: 995px;
+            height: 1401px;
+        }
+
+        /* 以绝对定位方式快速进行布局 */
+        #wrap {
+            position: absolute;
+            width: 242px;
+            height: 232px;
+            z-index: 1;
+            left: 737px;
+            top: 395px;
+        }
+
+        /* 初始化超链接 */
+        a {
+            padding-left: 24px;
+            text-decoration: none;
+        }
+
+        /* 初始化span元素 */
+        span {
+            color: #999;
+            font-size: 12px;
+            display: block;
+            padding-left: 24px;
+            padding-bottom: 6px;
+
+        }
+
+        /* 初始化p元素基本样式 */
+        p {
+            margin: 4px;
+        }
+
+        /* 匹配所有有效超链接 */
+        a[href^="http:"] {
+        }
+
+        /* 匹配PDF文件 */
+        a[href$="pdf"] {
+            background: url(images/pdf.jpg) no-repeat left center;
+        }
+
+        /*  匹配演示文稿*/
+        a[href$="ppt"] {
+            background: url(images/ppt.jpg) no-repeat left center;
+        }
+
+        /* 匹配记事本文件 */
+        a[href$="txt"] {
+            background: url(images/txt.jpg) no-repeat left center;
+        }
+
+        /* 匹配Word文件 */
+        a[href$="doc"] {
+            background: url(images/doc.jpg) no-repeat left center;
+        }
+
+        /* 匹配Excel文件 */
+        a[href$="xls"] {
+            background: url(images/xls.jpg) no-repeat left center;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <p>
+        <a href="http://www.baidu.com/name.pdf">移动互联网</a>
+        <span><img src="images/star1.jpg"> 81页 免费</span>
+    </p>
+
+    <p>
+        <a href="http://www.baidu.com/name.ppt">什么是移动互联网</a>
+        <span><img src="images/star1.jpg"> 8页 1财富值</span>
+    </p>
+
+    <p>
+        <a href="http://www.baidu.com/name.xls">中国移动互联网</a>
+        <span><img src="images/star1.jpg"> 38页 1财富值 </span>
+    </p>
+
+    <p>
+        <a href="http://www.baidu.com/name.txt">移动互联网</a>
+        <span><img src="images/star2.jpg"> 57页 5财富值</span>
+    </p>
+
+    <p>
+        <a href="http://www.baidu.com/name.doc">移动互联网</a>
+        <span><img src="images/star2.jpg"> 42页 2财富值</span>
+    </p>
+</div>
+</body>
+</html>

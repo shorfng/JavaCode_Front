@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-17 17:32
+  PageName：g_imageStyle_Shadow.html
+  Function：阴影图像
+  URL：http://localhost:8080/f_image/f2_image_Style/g_imageStyle_Shadow.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>阴影图像</title>
+
+    <style type="text/css">
+        img {
+            width: 300px;
+            margin: 6px;
+        }
+
+        /* 阴影图像 */
+        .r1 {
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            -moz-box-shadow: 8px 8px 14px #06C;     /* 兼容Gecko引擎 */
+            -webkit-box-shadow: 8px 8px 14px #06C;  /* 兼容Webkit引擎 */
+            box-shadow: 8px 8px 14px #06C;          /* 标准用法 */
+        }
+
+        /* 多层阴影效果 */
+        .r2 {
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            border-radius: 12px;
+            -moz-box-shadow: -10px 0 12px red, 10px 0 12px blue, 0 -10px 12px yellow, 0 10px 12px green;
+            -webkit-box-shadow: -10px 0 12px red, 10px 0 12px blue, 0 -10px 12px yellow, 0 10px 12px green;
+            box-shadow: -10px 0 12px red, 10px 0 12px blue, 0 -10px 12px yellow, 0 10px 12px green;
+        }
+    </style>
+</head>
+
+<body>
+<img src="images/TD.jpg" title="无阴影图像"/>&nbsp;
+<img class="r1" src="images/TD.jpg" title="阴影图像"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img class="r2" src="images/TD.jpg" title="阴影图像"/>
+</body>
+</html>

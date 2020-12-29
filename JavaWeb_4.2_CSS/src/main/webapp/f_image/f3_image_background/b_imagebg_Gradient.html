@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-18 11:05
+  PageName：b_imagebg_Gradient.html
+  Function：设置背景图像 - 渐变背景
+  URL：http://localhost:8080/f_image/f3_image_background/b_imagebg_Gradient.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置背景图像 - 渐变背景</title>
+
+    <style type="text/css">
+        body {
+            background: #ededed;
+            margin: 30px auto;
+        }
+
+        .blue {
+            color: #d9eef7;
+            height: 100px;
+            width: 400px;
+            margin: auto;
+            line-height: 100px;
+            text-align: center;
+            border: solid 1px #0076a3;
+            background: #0095cd;
+            background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+            background: -moz-linear-gradient(top, #00adee, #0078a5);
+            /* 设置渐变背景效果：线性渐变，从上到下，从浅蓝到深蓝 */
+            background: linear-gradient(to bottom, #00adee, #0078a5);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .3);    /* 设置文本阴影 */
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;   /* 设置圆角 */
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .2);  /* 设置盒子阴影 */
+        }
+    </style>
+</head>
+
+<body>
+<div class="blue">渐变背景</div>
+</body>
+</html>

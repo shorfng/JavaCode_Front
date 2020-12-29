@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 18:25
+  PageName：d_attribute_Overwrite.html
+  Function：H5新增输入属性 - Overwrite
+  URL：http://localhost:8080/j_form/j4_form_input_attribute/d_attribute_Overwrite.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增输入属性 - Overwrite</title>
+</head>
+
+<body>
+<!-- 通过重写表单的action属性，将表单提交到不同的页面中 -->
+<form action="1.asp" id="testform">
+    请输入电子邮件地址：
+    <input type="email" name="userid"/><br/>
+    <input type="submit" value="提交到页面1" formaction="1.asp"/>
+    <input type="submit" value="提交到页面2" formaction="2.asp"/>
+    <input type="submit" value="提交到页面3" formaction="3.asp"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-09-14 11:12
+  PageName：e_Target.html
+  Function：伪类选择器 - 目标伪类
+  URL：http://localhost:8080/d4_selector_pseudoclass/e_Target.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器 - 目标伪类</title>
+
+    <style type="text/css">
+        div:target {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+<div id="red">盒子1</div>
+<div id="blue">盒子2</div>
+</body>
+</html>
+
+<!-- 在浏览器地址栏中，最后加上#red或者#blue，会锚点方式连接到24行或25行代码，该元素会立即显示为红色背景-->

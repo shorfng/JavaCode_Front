@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-10-12 9:19
+  PageName：a_Text_Align.html
+  Function：文本样式 - 文本对齐方式
+  URL：http://localhost:8080/e2_webpage_TextStyle/a_Text_Align.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>文本样式 - 文本对齐方式</title>
+
+    <style type="text/css">
+        /* 居中对齐 */
+        .center {
+            text-align: center;
+        }
+
+        /* 页面居中显示 */
+        body {
+            text-align: center;
+        }
+
+        /* 块状元素居中对齐 */
+        #box {
+            margin-left: auto; /* 左侧边界为自动 */
+            margin-right: auto; /* 右侧边界为自动 */
+            text-align: left; /* 恢复文本左对齐默认样式 */
+            width: 300px; /* 定义盒子的宽度 */
+            height: 50px; /* 定义盒子的高度 */
+            background: red; /* 红色背景色 */
+        }
+
+        .test p {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .left p {
+            text-align: left;
+        }
+
+        .right p {
+            text-align: right;
+        }
+
+        .center p {
+            text-align: center;
+        }
+
+        .justify p {
+            width: 200px;
+            text-align: justify;
+        }
+
+        .start p {
+            text-align: start;
+        }
+
+        .end p {
+            text-align: end;
+        }
+    </style>
+</head>
+
+<body>
+<p align="center">传统居中对齐方式</p>
+<p class="center">标准居中对齐方式</p>
+
+<div id="box">块元素</div>
+
+<ul class="test">
+    <li class="left">
+        <strong>left</strong>
+        <p>左对齐</p>
+    </li>
+
+    <li class="center">
+        <strong>center</strong>
+        <p>居中对齐</p>
+    </li>
+
+    <li class="right">
+        <strong>right</strong>
+        <p>右对齐</p>
+    </li>
+
+    <li class="start">
+        <strong>start</strong>
+        <p>start效果</p>
+    </li>
+
+    <li class="end">
+        <strong>end</strong>
+        <p>end效果</p>
+    </li>
+</ul>
+</body>
+</html>

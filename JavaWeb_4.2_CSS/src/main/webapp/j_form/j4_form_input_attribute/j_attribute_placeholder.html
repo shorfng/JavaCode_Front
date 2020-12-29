@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-09 18:29
+  PageName：j_attribute_placeholder.html
+  Function：H5新增输入属性 - placeholder
+  URL：http://localhost:8080/j_form/j4_form_input_attribute/j_attribute_placeholder.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5新增输入属性 - placeholder</title>
+</head>
+
+<body>
+<form action="/testform.asp" method="get">
+    请输入邮政编码:
+    <input type="text" name="zip_code" pattern="[0-9]{6}" placeholder="请输入6位数的邮政编码"/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

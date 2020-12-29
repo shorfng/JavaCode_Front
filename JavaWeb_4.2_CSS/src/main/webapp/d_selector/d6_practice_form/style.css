@@ -1,0 +1,77 @@
+/* 通过通配选择器清除页面中所有标签的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 定义网页字体效果 */
+body {
+    font-family: Georgia, serif;
+    background: url(images/login-page-bg.jpg) center -50px no-repeat #c4c4c4;
+    color: #3a3a3a;
+}
+
+/* 定义清除样式类，以便控制页面中每个表单域的换行显示 */
+.clear {
+    clear: both;
+}
+
+/* 设计表单对象样式，其中通过属性选择器控制复选框的样式 */
+form {
+    width: 406px;
+    margin: 120px auto 0;
+}
+
+legend {
+    display: none;
+}
+
+fieldset {
+    border: 0;
+}
+
+label {
+    width: 115px;
+    text-align: right;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 9px 0 0 0;
+    font-size: 16px;
+}
+
+input {
+    width: 220px;
+    display: block;
+    padding: 4px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #3a3a3a;
+    font-family: Georgia, serif;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+/* 设计按钮在鼠标经过和未经过时的状态样式 */
+.button {
+    background: url(images/button-bg.png) repeat-x top center;
+    border: 1px solid #999;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    width: 70px;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}

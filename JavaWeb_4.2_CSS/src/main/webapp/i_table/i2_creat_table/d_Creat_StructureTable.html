@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2018-11-01 9:57
+  PageName：d_Creat_StructureTable.html
+  Function：创建表格 - 结构化的表格
+  URL：http://localhost:8080/i_table/i2_creat_table/d_Creat_StructureTable.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建表格 - 结构化的表格</title>
+
+    <style type="text/css">
+        table {
+            width: 100%;
+        }
+
+        caption {
+            font-size: 24px;
+            margin: 12px;
+            color: blue;
+        }
+
+        th, td {
+            border: solid 1px blue;
+            padding: 8px;
+        }
+
+        tfoot td {
+            text-align: right;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <!-- 标题 -->
+    <caption>结构化表格标签</caption>
+
+    <!-- 表头 -->
+    <thead>
+    <tr>
+        <th>标签</th>
+        <th>说明</th>
+    </tr>
+    </thead>
+
+    <!-- 表注/页脚 -->
+    <tfoot>
+    <tr>
+        <td colspan="2">* 在表格中，上述标签属于可选标签。</td>  <!-- colspan可以横向合并单元格 -->
+    </tr>
+    </tfoot>
+
+    <!-- 表格主体 -->
+    <tbody>
+    <tr>
+        <td>&lt;thead&gt;</td>
+        <td>定义表头结构。</td>
+    </tr>
+    <tr>
+        <td>&lt;tbody&gt;</td>
+        <td>定义表格主体结构。</td>
+    </tr>
+    <tr>
+        <td>&lt;tfoot&gt;</td>
+        <td>定义表格的页脚结构。</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
