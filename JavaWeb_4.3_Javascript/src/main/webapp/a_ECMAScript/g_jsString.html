@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-09-05 10:04
+  PageName：g_jsString.html
+  Function：js的字符串对象
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的字符串对象</title>
+</head>
+
+<script type="text/javascript">
+    /* 字符串的创建方式 */
+    const str1 = new String();  // 空字符串，new 的方式
+    const str2 = String();      // 空字符串
+    const str3 = "abode";       // 指定字符串内容
+
+    /* 打印字符串的长度：字符串名.length */
+    document.write("字符串str3的长度为：" + str3.length + "<br>");
+
+    /* 字符串的方法 */
+    // substr()：从起始索引号提取字符串中指定数目的字符
+    const str4 = "-a-b-c-d-e-f-";
+    const str5 = str4.substr(2, 4); //-b-c
+    document.write("字符串str5的长度为：" + str5 + "<br>");
+
+    // substring()：提取字符串中两个指定的索引号之间的字符，含头不含尾
+    const str6 = str4.substring(2, 4);  //-b
+    document.write("字符串str6的长度为：" + str6 + "<br>");
+</script>
+
+<body>
+
+</body>
+</html>

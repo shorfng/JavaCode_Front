@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-23 10:40
+  PageName：a_jsBasicGrammar.html
+  Function：js的基本语法
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的基本语法</title>
+</head>
+
+<!-- JS内部引入方式 -->
+<script type="text/javascript">
+    alert("这里是JS内部引入方式的代码！");
+
+    /* write和writeln在XHTML、HTML文件不起作用 */
+    document.writeln(); // 可以换行
+    document.write();   // 不能换行
+    document.write("换行" + "<br>"); // 在HTML中可以达到换行效果
+</script>
+
+<!-- JS外部引入方式 -->
+<script type="text/javascript" src="MyJS.js"></script>
+
+<body>
+<input type="button" value="点我" onclick="alert('点击按钮，弹出框')"/><br>
+<a href="javascript:alert('点击链接，弹出框')">点我</a>
+</body>
+</html>

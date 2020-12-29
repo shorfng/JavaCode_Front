@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-30 13:10
+  PageName：h1_jsArray.html
+  Function：js的数组对象
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的数组对象</title>
+</head>
+
+<script type="text/javascript">
+    /* 创建数组的方式 */
+    var arr = [];            // 空数组
+    var arr1 = new Array();  // 空数组
+    var arr2 = new Array(5); // 指定长度
+    var arr3 = [1, 2, 3];    // 指定元素
+
+    /* 打印数组长度：数组名.length */
+    document.write("数组arr中的元素数目为：" + arr.length + "<br>");
+    document.write("数组arr1中的元素数目为：" + arr1.length + "<br>");
+    document.write("数组arr2中的元素数目为：" + arr2.length + "<br>");
+    document.write("数组arr3中的元素数目为：" + arr3.length + "<br>");
+
+    /* 打印数组中的元素：数组名 */
+    document.write("数组arr3中的元素为：" + arr3 + "<br>");
+
+    /* 打印数组中的特定下标的元素 */
+    document.write("打印数组arr3中下标为1的元素：" + arr3[1] + "<br>");
+
+    /* 数组的方法 */
+    /*（1）join() 把数组的所有元素按照指定参数拼接成一个字符串 */
+    var str = arr3.join("-");
+    document.write(str + "<br>");
+
+    /*（2）向数组的开头添加一个或更多元素，并返回新的长度 */
+    arr3.unshift("4", "5");
+    document.write("在数组开头添加一个或多个元素：" + arr3 + "<br>");
+
+    /*（3）shift() 删除并返回数组的第一个元素 */
+    arr3.shift();
+    document.write("删除数组开头的第一个元素：" + arr3 + "<br>");
+
+    /*（4）push() 向数组的末尾添加一个或更多元素，并返回新的长度 */
+    arr3.push("5");
+    document.write("在数组末尾添加一个元素：" + arr3 + "<br>");
+
+    /*（5）pop() 删除并返回数组的最后一个元素 */
+    arr3.pop();
+    document.write("删除在数组末尾的元素：" + arr3 + "<br>");
+
+    /*（6）sort() 对数组的元素进行排序 */
+    arr3.sort();
+    document.write("正序排序：" + arr3 + "<br>");
+
+    /*（7）reverse() 颠倒数组中元素的顺序 */
+    arr3.reverse();
+    document.write("逆序排序：" + arr3 + "<br>");
+
+    /*（8）toLocaleString() 把数组转换为本地字符串*/
+    var date = new Date();
+    document.write("时间：" + date.toLocaleString() + "<br>");
+
+    /* 数组遍历 */
+    document.write("for循环遍历：" + "<br>");
+    for (var i in arr3) {
+        document.write(arr3[i] + "<br>");
+    }
+
+    // TODO：不知道这是什么用法
+    var arr4 = [];
+    arr4["数组"] = 123;
+    arr4["北京市"] = ["昌平区", "海淀区"];
+
+    document.write(arr4["数组"] + "<br>");
+    document.write(arr4["北京市"] + "<br>");
+</script>
+
+<body>
+
+</body>
+</html>

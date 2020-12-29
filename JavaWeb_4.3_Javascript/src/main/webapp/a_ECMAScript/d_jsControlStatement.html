@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-23 11:34
+  PageName：d_jsControlStatement.html
+  Function：js的控制语句
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的控制语句</title>
+</head>
+
+<script type="text/javascript">
+    /* switch语句 */
+    var text = 'a';
+    switch (text) {
+        case 'a':
+            document.write("string");
+            break;
+        case "abc":
+            document.write("string");
+            break;
+        case 10:
+            document.write("number");
+            break;
+        case true:
+            document.write("boolean");
+            break;
+        case undefined:
+            document.write("undefined");
+            break;
+        case NaN:
+            document.write("NaN");
+            break;
+    }
+
+    /* 换行 */
+    document.write("<br>");
+
+    /* for 循环语句 */
+    var arr = ["aa", "bb", "cc", "dd"];
+
+    for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i]);
+    }
+
+    document.write("<br>");
+
+    for (var j in arr) {
+        document.write(arr[j]);
+    }
+</script>
+<body>
+
+</body>
+</html>

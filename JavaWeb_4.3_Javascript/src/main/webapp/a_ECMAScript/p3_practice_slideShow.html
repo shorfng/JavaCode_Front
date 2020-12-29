@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-12-23 16:49
+  PageName：p3_practice_slideShow.html
+  Function：案例3：轮播图
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>案例3：轮播图</title>
+    <script type="text/javascript">
+        onload = function () {
+            // setInterval(“函数名/表达式”,重复执行的周期时间-毫秒值);
+            setInterval(changImg, 2000);
+        };
+
+        let i = 1;
+        function changImg() {
+            // 获取img
+            i++;
+            const imgObj = document.getElementById("imgId");
+            imgObj.src = "../img/" + i + ".jpg";
+
+            if (i === 3) {
+                i = 0;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<!--轮播图-->
+<div class="lunbo">
+    <img id="imgId" alt="#" src="../img/1.jpg"/>
+</div>
+</body>
+</html>

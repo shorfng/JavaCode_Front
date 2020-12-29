@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-12-24 11:17
+  PageName：a_Window.html
+  Function：BOM对象 - Window
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOM对象 - Window</title>
+
+    <script type="text/javascript">
+        /* 消息框 */
+        //（1）确认弹出框
+        confirm("您确定是否删除吗？");
+
+        //（2）输入框
+        prompt("请输入价格","100");
+
+        /* 关闭页面 */
+        function closeSelf() {
+            close();
+        }
+
+        /* 打开一个新的标签页面 */
+        function openNewPage(){
+            open("b_Location.html");
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="关闭本页面" onclick="closeSelf()"/>
+
+<input type="button" value="打开一个新的标签页面" onclick="openNewPage()" />
+</body>
+</html>

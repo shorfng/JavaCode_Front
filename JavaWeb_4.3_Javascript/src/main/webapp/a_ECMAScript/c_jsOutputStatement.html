@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-09-18 11:30
+  PageName：c_jsOutputStatement.html
+  Function：js的输出语句
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的输出语句</title>
+
+    <script type="text/javascript">
+        /* alert：弹出警告框 */
+        alert("弹出警告框");
+
+        /* confirm：确认框，可以选择 */
+        var truthBeTold = window.confirm("单击“确定”继续。单击“取消”停止。");
+        if (truthBeTold) {
+            window.alert("欢迎访问我们的 Web 页！");
+        } else {
+            window.alert("再见啦！");
+        }
+
+        /* prompt：输入框，可以输入内容 */
+        var theResponse = window.prompt("欢迎？","请在此输入您的姓名。");
+
+        /* document.write：往页面中输入内容 */
+        document.write(theResponse);
+
+        /* console.log("Message")：在控制台打印内容，专门用于调试 */
+        console.log("Message");
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

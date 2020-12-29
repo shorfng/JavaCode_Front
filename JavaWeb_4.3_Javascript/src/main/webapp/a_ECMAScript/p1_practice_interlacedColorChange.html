@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-12-23 15:50
+  PageName：p1_practice_interlacedColorChange.html
+  Function：案例1：表格隔行换色
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>案例1：表格隔行换色</title>
+    <script type="text/javascript">
+        /* 页面加载事件 */
+        onload = function () {
+            changeColor();
+        };
+
+        function changeColor() {
+            // 获取tr列表
+            var trs = document.getElementsByTagName("tr");
+
+            // 遍历
+            for (var i = 1; i < trs.length; i++) {
+                var tr = trs[i]; // 获取tr
+
+                // 改变颜色
+                if (i % 2 === 0) {
+                    tr.style.backgroundColor = "green";
+                } else {
+                    tr.style.backgroundColor = "yellow";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+<table id="tab1" style="border: 1px;width: 800px; text-align: center">
+    <caption></caption>
+    <tr style="background-color: #999999;">
+        <th scope="col">分类ID</th>
+        <th scope="col">分类名称</th>
+        <th scope="col">分类描述</th>
+        <th scope="col">操作</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-30 14:43
+  PageName：h2_practice_linkage.html
+  Function：实战案例 - 省市二级联动
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战案例 - 省市二级联动</title>
+</head>
+
+<script type="text/javascript">
+    // 定义二维数组:
+    var arr = new Array(5);
+    arr[0] = [];
+    arr[1] = ["哈尔滨", "齐齐哈尔", "大庆", "佳木斯"];
+    arr[2] = ["长春市", "吉林市", "四平市", "通化市"];
+    arr[3] = ["沈阳市", "锦州市", "大连市", "铁岭市"];
+    arr[4] = ["郑州市", "洛阳市", "安阳市", "南阳市"];
+
+    function selectCities(obj) {
+        var flag = obj.value;   // 获取省份的标识符
+        var cities = arr[flag]; // 获取对应的城市列表
+
+        // 先清除city下拉框中otpions
+        document.getElementsByName("city")[0].innerHTML = "<option >--请选择--</option>";
+
+        // 遍历
+        for (var i = 0; i < cities.length; i++) {
+            var cityName = cities[i];
+            var option = "<option>" + cityName + "</option>";
+            document.getElementsByName("city")[0].innerHTML += option;
+        }
+    }
+</script>
+
+<body>
+<form action="#" method="get">
+    <input type="hidden" name="id"/>
+    姓名:<label><input name="username" type="text" placeholder="--请输入姓名--"/></label><br><br>
+
+    密码:<label><input name="password" type="password" placeholder="--请输入密码--"></label><br><br>
+
+    性别:<label><input type="radio" name="sex" value="1" checked="checked"></label>男
+    <label><input type="radio" name="sex" value="0"></label>女<br><br>
+
+    爱好:<label><input type="checkbox" name="hobby" value="eat"></label>吃
+    <label><input type="checkbox" name="hobby" value="drink" checked="checked"></label>喝
+    <label><input type="checkbox" name="hobby" value="sleep" checked="checked"></label>睡<br><br>
+
+    头像:<input type="file" name="photo"><br><br>
+
+    籍贯:
+    <label>
+        <select name="pro" onchange="selectCities(this)">
+            <option value="0">--请选择--</option>
+            <option value="1">黑龙江</option>
+            <option value="2">吉林</option>
+            <option value="3">辽宁</option>
+            <option value="4">河南</option>
+        </select>
+    </label>
+
+    <select name="city">
+        <option>--请选择-- </option>
+    </select>
+
+    <br><br>
+
+    自我介绍:<br>
+    <label>
+        <textarea name="intr" cols="40" rows="4">good!</textarea>
+    </label>
+
+    <br><br>
+
+    <input type="submit" value="保存"/>
+    <input type="reset"/>
+    <input type="button" value="普通按钮"/>
+</form>
+</body>
+</html>

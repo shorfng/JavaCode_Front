@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2020-01-03 16:30
+  PageName：d_timer.html
+  Function：定时器
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+
+    <script type="text/javascript">
+        //方式一
+        setInterval(test1,5000);
+        function test1() {
+            alert("方式一");
+        }
+
+        //方式二
+        setInterval("test2()",5000);
+        function test2() {
+            alert("方式二");
+        }
+
+        //方式三
+        setInterval(function () {
+            alert("方式三");
+        }, 5000);
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

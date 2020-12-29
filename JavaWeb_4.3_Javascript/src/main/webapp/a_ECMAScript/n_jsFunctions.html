@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-09-25 16:17
+  PageName：n_jsFunctions.html
+  Function：js的全局对象
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的全局对象</title>
+
+    <script type="text/javascript">
+        /* 1、parseInt()：解析一个字符串并返回一个整数 */
+        var a1 = 10;
+        var a2 = a1 + parseInt("123");
+        document.write("parseInt函数，a2 = " + a2 + "<br>");   // 数字相加
+
+        var a3 = parseInt("12d3abdsaf");
+        document.write("parseInt函数，a3 = " + a3 + "<br>");  // 结果为12，遇到非数字停止解析
+
+        /* 2、parseFloat()：解析一个字符串并返回一个浮点数 */
+        var b = parseFloat("12d.5asdf");
+        document.write("parseFloat函数，b = " + b + "<br>"); // 结果为12，遇到非数字停止解析
+
+        /* 3、isNaN()：检查某个值是否是数字 */
+        var bool = isNaN(12345);
+        document.write("isNaN函数：" + bool + "<br>");
+
+        /* 4、eval()：计算 JavaScript 字符串，并把它作为脚本代码来执行 */
+        var str = "12+5";
+        document.write("eval函数：" + eval(str) + "<br>");
+
+        /* 5、encodeURI()：把字符串编码为 URI */
+        var str1 = encodeURI("蓝田");
+        document.write("encodeURI函数：" + str1 + "<br>");
+
+        /* 6、decodeURI()：解码某个编码的 URI */
+        var str2 = decodeURI("%E8%93%9D%E7%94%B0");
+        document.write("decodeURI函数：" + str2 + "<br>");
+
+        /* 7、encodeURIComponent()：把字符串编码为 URI 组件 */
+        var str3 = encodeURIComponent("蓝&田");
+        document.write("encodeURIComponent函数：" + str3 + "<br>");
+
+        /* 8、decodeURIComponent()：解码一个编码的 URI 组件 */
+        var str4 = decodeURIComponent("%E8%93%9D%26%E7%94%B0");
+        document.write("decodeURIComponent函数：" + str4 + "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

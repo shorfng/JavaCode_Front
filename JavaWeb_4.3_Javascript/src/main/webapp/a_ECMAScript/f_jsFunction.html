@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-27 14:33
+  PageName：f_jsFunction.html
+  Function：js的函数
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的函数</title>
+</head>
+
+<script type="text/javascript">
+    /* 函数定义格式 */
+    // 方式1
+    function function1() {
+    }
+
+    // 方式2：匿名函数
+    var function2 = function () {
+    };
+
+    // 方式3：此方式几乎不用
+    var function3 = new Function("a", "b", "c", "alert(a+b)");
+    var z = function3(4, 3); // 函数的调用
+
+    /* 根据函数的参数和返回值进行分类 */
+    /* 1、无参无返回值 */
+    function noParamFunction() {
+        alert("无参无返回值，只有被调用才会执行");
+    }
+
+        /* 2、有参无返回值 */
+    function paramFunction(name, age) {
+        alert("名字：" + name + "，年龄：" + age);
+    }
+
+    /* 3、无参有返回值return */
+    function noParamReturnFunction() {
+        return "正在调用无参有返回值return....";   // return相当于把这句话以字符串形式返回
+    }
+
+    // 调用noParamReturnFunction()，相当于noParamReturnFunction = 调用无参return
+    function noParamReturn() {
+        alert(noParamReturnFunction());
+    }
+
+    /* 4、有参有返回值return */
+    function paramReturnFunction(name, age) {
+        return "名字：" + name + "，年龄：" + age;
+    }
+
+    function paramReturn() {
+        alert(paramReturnFunction("TD", 26));
+
+        // 也可以把函数的返回值赋值给一个变量，然后通过变量操作
+        var stringText =paramReturnFunction("CJ", 26);
+        alert(stringText);
+    }
+
+    /* 函数的参数 - arguments对象的使用 */
+    // 案例：找到最大的数字
+    function findMax() {
+        var i;
+        var max = -Infinity;
+        for (i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+    document.write("函数的参数 - arguments对象：" + "<br>");
+    document.write("案例，找到最大的数字：" + findMax(4, 5, 6) + "<br>");
+
+    // 案例：所有参数的总和
+    function sumAll() {
+        var i;
+        var sum = 0;
+        for (i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    document.write("案例，所有参数的总和：" + sumAll(1, 123, 500, 115, 44, 88) + "<br>");
+
+    /* 函数的调用 */
+    function myFunction(arg1, arg2) {
+        this.firstName = arg1;
+        this.lastName  = arg2;
+    }
+
+    var x = new myFunction("Bill","Gates")
+
+    // TODO:js的函数
+    /*
+    * 函数的Call
+    * 函数的Apply
+    * 闭包
+    * */
+</script>
+
+<body>
+<br>
+<button onclick="noParamFunction()">无参无返回值</button><br><br>
+<button onclick="paramFunction('蓝田_Loto',26)">有参无返回值</button><br><br>
+<button onclick="noParamReturn()">无参有返回值return</button><br><br>
+<button onclick="paramReturn()">有参有返回值return</button><br><br>
+</body>
+</html>

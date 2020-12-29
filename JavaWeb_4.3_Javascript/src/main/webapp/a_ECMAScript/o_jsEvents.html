@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-10-14 15:59
+  PageName：o_jsEvents.html
+  Function：js的事件对象
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的事件对象</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("btn").onclick = function () {
+                location.href = "p1_practice_interlacedColorChange.html"
+            }
+        }
+    </script>
+</head>
+
+<body>
+<!-- js 代码改变了 id为 demo1 的元素的内容 -->
+<button onclick="document.getElementById('demo1').innerHTML=Date()">时间是？</button>
+<p></p>
+
+<!-- 使用 this.innerHTML 改变了其自身元素的内容 -->
+<button onclick="this.innerHTML=Date()">时间是？</button>
+<p></p>
+
+<input type="button" value="点我跳转！" id="btn"/>
+</body>
+</html>

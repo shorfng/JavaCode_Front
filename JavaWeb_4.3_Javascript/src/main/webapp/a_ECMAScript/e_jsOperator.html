@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-08-27 14:15
+  PageName：e_jsOperator.html
+  Function：js的运算符
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>js的运算符</title>
+</head>
+
+<script type="text/javascript">
+    /* 等性运算符 */
+    // == 比较字面值，在做比较的时候会进行自动转换
+    document.write(333 == "333"); // true
+    document.write("<br>");
+
+    // === 在比较字面值相同的基础之上，判断类型是否相同，在做比较的时候不会进行自动转换
+    document.write(333 === "333");  // false
+    document.write("<br>");
+
+    /* 关系运算符 */
+    var i = 18;
+    alert(i > 19);    // 比较双方，如果都是number类型 ，跟java一致
+    alert("a" < "b"); // 比较双方，都是普通字符串，会比较两者的ascci码
+    alert(i > "17");  // 比较双方，一方是number，一方是可以转换成number类型，则隐式转换再比较
+    alert(i < "abc"); // 比较双方，一方是number，一方是不可转化的字符串，则直接返回false
+
+
+    var a = 10;
+    var A = 20;
+    document.write(a + A);
+</script>
+
+<body>
+
+</body>
+</html>

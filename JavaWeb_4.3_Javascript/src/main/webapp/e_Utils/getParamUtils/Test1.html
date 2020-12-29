@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：蓝田_Loto
+  Date：2019-09-10 10:40
+  PageName：Test1.html
+  Function：将URL传递到Test2.html中
+  URL：http://localhost:8080/JavaWeb_4_1_03_Javascript/f_Utils/getParamUtils/Test1.html
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>将URL传递到Test2.html中</title>
+
+    <script type="text/javascript">
+        /* 模拟单个参数跳转的数据 */
+        var id = "123456";
+        var setParam = function () {
+            // 打开新页面
+            window.open('Test2.html?id=' + id)
+        };
+
+        /* 模拟多个参数跳转的数据 */
+        var name = "TD";
+        var age = 18;
+        var setParams = function () {
+            // 打开新页面
+            // window.open('Test2.html?name=' + name + '&age=' + age);
+
+            // 跳转当前页面
+            window.location.assign('Test2.html?name=' + name + '&age=' + age);
+        }
+    </script>
+</head>
+
+<body>
+<button name="" type="button" onclick="setParam()">单个参数跳转Test2.html</button><br><br>
+<button name="" type="button" onclick="setParams()">多个参数跳转Test2.html</button>
+</body>
+</html>

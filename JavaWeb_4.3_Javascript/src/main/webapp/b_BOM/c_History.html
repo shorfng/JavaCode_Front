@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：tiandongdong
+  Date：2019-12-25 13:38
+  PageName：c_History.html
+  Function：BOM对象 - History
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOM对象 - History</title>
+
+    <script type="text/javascript">
+        function historyFunc() {
+            // -1返回上一个历史记录页面
+            // -2返回上上一个历史记录页面
+            // 1进入下一个历史记录页面
+            history.go(1);
+            //history.back();
+        }
+    </script>
+</head>
+
+<body>
+<a href="b_Location.html">下一页</a>
+<br/>
+
+<input type="button" value="返回上一页" onclick="historyFunc()"/>
+<br/>
+</body>
+</html>
