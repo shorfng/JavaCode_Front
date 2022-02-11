@@ -6,11 +6,11 @@
 
     <!-- 子工程信息 -->
     <groupId>com.loto</groupId>
-    <artifactId>JavaWeb_4.2_CSS</artifactId>
+    <artifactId>Front_7.5_BootStrap</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>JavaWeb_4.2_CSS Maven Webapp</name>
+    <name>Front_7.5_BootStrap Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -22,7 +22,7 @@
     </properties>
 
     <build>
-        <finalName>JavaWeb_4.2_CSS</finalName>
+        <finalName>Front_7.5_BootStrap</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
