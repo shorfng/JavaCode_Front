@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS与JQ页面加载区别</title>
+
+<script type="text/javascript" src="../../js/jquery-1.8.3.js"></script>
+<script>
+	/*JS方式：整个页面加载完毕才会执行加载函数，包括里面的其它内容（比如图片）*/
+	/* 页面加载会存在覆盖问题（“老王”覆盖“张三”）*/
+	window.onload = function() {
+		alert("张三");
+	}
+
+	window.onload = function() {
+		alert("老王");
+	}
+
+	/* JQ方式：当整个dom树结构绘制完毕就会执行加载函数 */
+	/* 不存在覆盖问题，加载的时候是顺序执行 */
+	jQuery(document).ready(function() {
+		alert("李四");
+	});
+
+	$(document).ready(function() {
+		alert("王五");
+	});
+
+	// JQ简写方式
+	$(function() {
+		alert("汾九");
+	});
+</script>
+
+</head>
+<body>
+</body>
+</html>

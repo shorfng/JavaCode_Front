@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dom与JQ对象之间的转换</title>
+
+<script type="text/javascript" src="../../js/jquery-1.4.2.js"></script>
+<script>
+	function write1() {
+		// 1、JS的DOM操作
+		//document.getElementById("span1").html("萌萌哒！"); //（错误代码）JS的DOM对象无法操作JQ对象里面属性和方法
+		//document.getElementById("span1").innerHTML="萌萌哒！";
+
+		// DOM对象 -> JQ对象：$(DOM对象)
+		var spanEle = document.getElementById("span1");
+		$(spanEle).html("思密达");
+	}
+
+	$(function() {
+		$("#btn").click(function() {
+			//$("#span1").innerHTML="呵呵哒！"  // （错误代码）JQ对象无法操作JS里面的属性和方法！！！
+			$("#span1").html("呵呵哒！");
+
+			// JQ对象 -> DOM对象，转换方式一：get()
+			$("span").get(2).innerHTML = "美美哒！";
+
+			// JQ对象 -> DOM对象，转换方式二：数组
+			$("span")[2].innerHTML = "棒棒哒！";
+		});
+	});
+</script>
+
+</head>
+<body>
+	<input type="button" value="JS写入" onclick="write1()" />
+
+	<input type="button" value="JQ写入" id="btn" />
+	<br /> 班长：
+	<span id="span1">你好帅！</span>
+	<span id="span1">你好！</span>
+	<span id="span1">你好</span>
+</body>
+</html>
