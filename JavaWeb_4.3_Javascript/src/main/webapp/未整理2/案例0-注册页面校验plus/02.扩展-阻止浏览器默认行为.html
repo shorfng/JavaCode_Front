@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.itheima.com" onclick="one()">黑马程序员</a><br/>
+		<a href="http://www.itcast.cn" onclick="two(event)">传智播客</a><br/>
+		<script type="text/javascript">
+			function one(){
+				alert("我之后，黑马官网继续访问");
+			}
+			
+			function two(event){
+				alert("我之后，传智官网不再访问");
+				var event = event || window.event;
+				//火狐浏览器不能通过window.event获取
+				//var event=window.event
+				//阻止默认事件的发生
+				event.preventDefault();
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+<!--
+	//扩展 这种也可以获取
+	arguments.callee.caller.arguments[0]
+	arguments表示当前函数的参数
+	callee表示就是该函数
+	caller表示该函数的调用者
+	arguments[0]:表示的该函数调用者 的第一个参数 event
+-->

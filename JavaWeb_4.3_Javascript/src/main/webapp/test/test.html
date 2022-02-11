@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Author：tiandongdong
+  Date：2019-08-26 16:15
+  PageName：test.html
+  Function：
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>ul-li点击将对应li值输入到输入框中</title>
+</head>
+
+<body>
+<div class="">
+    <input type="text" id="inpt" onfocus="document.getElementById('ulList').style.display = 'block'"/>
+
+    <ul id="ulList" style="display:none;">       
+        <li data-value="111">aa</li>
+               
+        <li data-value="2222">bb</li>
+               
+        <li data-value="3333">cc</li>
+             
+        <li data-value="4444">dd</li>
+             
+        <li data-value="55555">ee</li>
+           
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var view = {
+        render: function () {
+            var self = this;
+            this.oinpt = document.getElementById("inpt");
+            this.oul = document.getElementById("ulList");
+            this._tach();
+
+        },
+        _tach: function () {
+            self = this;
+            var listli = self.oul.getElementsByTagName("li");
+            for (var i = 0; i < listli.length; i++) {
+                //闭包实现
+                (function (j) {
+                    listli[j].addEventListener("click", function (e) {
+                        self.oinpt.name = listli[j].dataset.value;
+                        self.oinpt.value = listli[j].innerHTML;
+
+                        document.getElementById('ulList').style.display = 'none';
+                    }, false);
+                })(i);
+            }
+            document.getElementById('ulList').style.display = 'none';
+        }
+    };
+
+    window.addEventListener("load", function () {
+        view.render();
+    }, false)
+</script>
+
+</body>
+</html>
