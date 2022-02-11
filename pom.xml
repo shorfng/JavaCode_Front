@@ -13,10 +13,10 @@
     <!-- 子工程信息 -->
     <modules>
         <module>Front_7.1_HTML</module>
-        <module>JavaWeb_4.2_CSS</module>
-        <module>JavaWeb_4.3_Javascript</module>
-        <module>JavaWeb_4.4_jQuery</module>
-        <module>JavaWeb_4.5_BootStrap</module>
+        <module>Front_7.2_CSS</module>
+        <module>Front_7.3_Javascript</module>
+        <module>Front_7.4_jQuery</module>
+        <module>Front_7.5_BootStrap</module>
     </modules>
 
     <!-- 解决Language Level版本问题 -->
